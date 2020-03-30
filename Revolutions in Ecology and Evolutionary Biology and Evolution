@@ -71,12 +71,12 @@ The next step is to make a distance matrix between years. We are going to use Je
 ##### Difference and standardise data
 Rho calculation - Remove #s to run, will take a long time
 ```{r}
-N <-nrow(d3)
-K <-ncol(d3)
-X<-d3
-stan_data <- list(N=N, K=K, X=X)
+N <-nrow(d3)#Length of our time series
+K <-ncol(d3) #K represents the number of variants each of which is a time series of length N
+X<-d3 #X is the data we provide to our stan model
+stan_data <- list(N=N, K=K, X=X) #Prepare N,K and X to be loaded into stan
 model <- stan_model("Rho.stan")
-#fit <- sampling(model, data=stan_data)
+#fit <- sampling(model, data=stan_data) 
 #fit
 
 ```
