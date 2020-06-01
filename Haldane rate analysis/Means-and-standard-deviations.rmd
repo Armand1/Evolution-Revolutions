@@ -1,0 +1,89 @@
+---
+title: "get means and standard deviations for all topics"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(data.table)
+library(reshape2)
+library(plyr)
+library(ggplot2)
+```
+
+#### preamble
+This gets the yearly probabiltiies
+
+#### data
+get the topic data per paper
+```{r}
+a<-fread("EEpaperslong.csv", header=TRUE)
+a<-as.data.frame(a)
+`````
+papers are already defined by the 5% criterion and only good topics remain.
+get the counts of all topics by years
+`````{r}
+s2<- ddply(a, .(haldtopic, year), summarise,
+N_present=length(present05[present05=="1"]),
+N_not_present=length(present05[present05=="0"]),
+N=length(paper_id))
+`````
+check all topics are present
+```{r}
+length(unique(s2$haldtopic))
+`````
+they are
+
+#### estimating the mean and sd of count
+This requires some functions. We're going to apply them to the 1% cutoff 
+Functions to calculate alpha and beta
+````{r}
+fOutputAlphaBeta <- function(aCaptured,aTotal,aAlphaPrior,aBetaPrior){
+  return(c(alpha=aCaptured+aAlphaPrior,beta=aTotal-aCaptured+aBetaPrior))
+}
+fOutputAllAlphaBeta <- function(lCaptured,lTotal,aAlphaPrior,aBetaPrior){
+  aTempDF <- data.frame(captured=lCaptured,total=lTotal)
+  lAlphaBeta <- apply(aTempDF,1,function(x) fOutputAlphaBeta(x[[1]],x[[2]],
+aAlphaPrior,aBetaPrior))
+  return(t(lAlphaBeta))
+}
+fMean <- function(aAlpha,aBeta){
+  return(aAlpha/(aAlpha+aBeta))
+}
+fSD <- function(aAlpha,aBeta){
+  return(sqrt(aAlpha * aBeta)/((aAlpha + aBeta) * sqrt(aAlpha + aBeta + 1)))
+}
+`````
+calculate alpha and beta, an intermediate step and then get the mean and sd
+````{r}
+lAlphaBeta<- fOutputAllAlphaBeta(s2$N_present,s2$N,1,1)
+lAlphaBeta.df<-as.data.frame(lAlphaBeta)
+s2$alpha<-lAlphaBeta.df$alpha
+s2$beta<-lAlphaBeta.df$beta
+s2$mean_from_alphabeta <- apply(lAlphaBeta,1,function(x) fMean(x[[1]],x[[2]]))
+s2$sd_from_alphabeta <- apply(lAlphaBeta,1,function(x) fSD(x[[1]],x[[2]]))
+`````
+regular proportions
+````{r}
+s2$proportion_present <- s2$N_present/s2$N
+s2$sd_proportion_present <- sqrt(s2$proportion_present * (1-s2$proportion_present)/s2$N)
+`````
+
+```{r}
+plot(s2$sd_proportion_present, s2$sd_from_alphabeta)
+````
+So, Ben's way of calculating things does give odd values at some very low proportions.
+
+add in the topic identities and make the final datafile
+````{r}
+c<-unique(a[c("originaltopic","haldtopic","topic_order","topic_use","topic_discipline","topic_majortaxon","topic_label")])
+
+s3<-merge(s2, c, by.x="haldtopic", by.y="haldtopic")
+s3 <- s3[order(s3$topic_order, s3$year),]
+length(unique(s3$haldtopic))
+```````
+
+````{r}
+write.csv(s3, "EEpapers_topics_byyear_05.csv", row.names=FALSE)
+`````
