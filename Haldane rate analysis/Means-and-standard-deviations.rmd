@@ -20,6 +20,9 @@ get the topic data per paper
 ```{r}
 a<-fread("EEpaperslong.csv", header=TRUE)
 a<-as.data.frame(a)
+a<-unique(a[c("originaltopic", "haldtopic", "topic_order")])
+colnames(a)<- c("originaltopic", "haldtopic", "order")
+write.csv(a,"topicnames.csv")
 `````
 papers are already defined by the 5% criterion and only good topics remain.
 get the counts of all topics by years
@@ -84,6 +87,6 @@ s3 <- s3[order(s3$topic_order, s3$year),]
 length(unique(s3$haldtopic))
 ```````
 
-````{r}
+```{r}
 write.csv(s3, "EEpapers_topics_byyear_05.csv", row.names=FALSE)
 `````
