@@ -1,0 +1,126 @@
+---
+title: "rate calculator for EE data papers"
+output: html_document
+---
+#### libraries
+This is the haldane rate calculator for the EE data
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#### libraries
+````{r}
+library(ggplot2)
+library(scales)
+library(plyr)
+library(reshape2)
+```````
+#### data
+`````{r}
+taDF <- read.csv('EEpapers_topics_byyear_05.csv')
+``````
+
+`````{r}
+taDF$year<-as.numeric(taDF$year)
+``````
+check years
+````{r}
+min(taDF$year)
+max(taDF$year)
+`````
+Since the haldane calculator relies on SD and means, we should eliminate years with absurdly low sample sizes. We subset between 1900 and 2010.
+```{r}
+taDF<-subset(taDF, year>=1900 & year<=2010)
+`````
+Well, even so, we have on 113 papers in 1900
+
+The calculator needs sequential topics. So we are going to use the haldtopics.  It's clutzy, but better than breaking the calculator function.
+```{r}
+taDF$topic<-taDF$haldtopic
+````
+This is a function that wraps the whole thing.
+```{r}
+fGetMidyearIntervalDiff <- function(taDF){
+  aLen <- length(unique(taDF$topic))  # This gets the number of series
+  bLen <- length(taDF$topic[taDF$topic=="topic1"]) # This gets the number of years within a series
+  
+  lResults <- data.frame() # This sets up a data frame
+  
+ # This  
+  for (i in 1:aLen){ 
+    print(i)
+    aTopicName <- paste0("topic",i)
+     if(i >= 99){
+      aTopicName <- paste0("topic",i+1)
+     }
+    onetopic<-subset(taDF, topic==aTopicName)
+    iter<-1:bLen   
+    
+    
+    interval<-c() #an empty vector to put the results in
+    
+    for (j in iter){
+      interval<-c(interval,(onetopic$year[j+iter]-onetopic$year[j]))
+    }
+    
+    midyear<-c() #an empty vector to put the results in
+    for (j in iter){
+      midyear<-c(midyear,(onetopic$year[j]+((onetopic$year[j+iter]-onetopic$year[j])/2)))
+    }
+    
+    diff<-c()
+    for (j in iter){
+      diff<-c(diff,(onetopic$proportion_present[j+iter]-onetopic$proportion_present[j]))
+    }
+    
+    SDp<-c() #
+	for (j in iter){
+	SDp<-c(SDp,((onetopic$sd_proportion_present[j+iter]*(onetopic$N[j+iter]-1)+ onetopic$sd_proportion_present[j]*(onetopic$N[j]-1))/(onetopic$N[j+iter]+onetopic$N[j]-2)))
+}
+
+    
+    # put these in a dataframe
+    res<-as.data.frame(midyear)
+    res$interval<-interval
+    res$diff<-diff
+    res$SDp<-SDp
+    res$topic <- onetopic$topic
+    lResults <- rbind.data.frame(lResults,res)
+  }
+  return(lResults)
+}
+````
+run haldane calculator
+````{r}
+lResults <- fGetMidyearIntervalDiff(taDF)
+````
+additional manipulations. 
+```{r}
+lResults$abs.diff<-abs(lResults$diff) # get absolute differences
+lResults$abs.hald.num<-lResults$abs.diff/lResults$SDp # get haldane numerator of abs.differences
+lResults$hald.rate<-lResults$abs.hald.num/lResults$interval
+```
+sorts it nicely by run, interval and midyear
+````{r}
+lResults<- lResults[order(lResults$topic, lResults$interval, lResults$midyear),] 
+````
+get rid of NAs
+````{r}
+lResults<-lResults[complete.cases(lResults),]
+````
+
+check date ranges
+````{r}
+s <- ddply(lResults, .(topic), summarise,
+			   min =min(midyear),
+			   max = max(midyear),
+			   minint = min(interval),
+			   maxint = max(interval))
+s <- s[order(s$min),] 
+write_csv(s, "Topic_starts.csv")
+````
+So, some topics only begin at 1912 or 1931.
+
+
+```{r}
+write.csv(lResults, file="EEpapers_05_res.csv", row.names=FALSE)	
+````
