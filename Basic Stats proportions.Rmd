@@ -1,0 +1,337 @@
+---
+title: "Basic Stats corrected"
+author: "Sam McKay"
+date: "15/04/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+rm(list=ls())
+library(reshape2)
+library(flexmix)
+library(ggplot2)
+library(plyr)
+library(scales)
+library(tidyr)
+library(broom)
+library(dplyr)
+library(gplots)
+library(philentropy)
+library(textmineR)
+library(data.table)
+library(cowplot)
+library(stringr)
+library(zoo)
+library(viridis)
+library(lubridate)
+ options(mc.cores=parallel::detectCores())
+`````
+#### data
+The data are LONG form.
+```{r}
+d<-fread("EEpaperslong.csv", header=TRUE)
+d<-as.data.frame(d)
+```
+Call number of topics. If fewer than 170 then topics are missing.
+```{r}
+length(unique(d$originaltopic))
+```
+If you wish to study other topics call all topic names for reference.
+```{r}
+#unique(d$topic_label) 
+```
+Calculate probability of topics (+ standard deviation) appearing each year
+```{r}
+s2<- ddply(d1, .(haldtopic, year), summarise,
+N_present=length(present05[present05=="1"]),
+N_not_present=length(present05[present05=="0"]),
+N=length(paper_id))
+s2$proportion_present <- s2$N_present/s2$N
+s2$sd_proportion_present <- sqrt(s2$proportion_present * (1-s2$proportion_present)/s2$N)
+```
+Add metadata columns (Topic names + higher categorisations)
+```{r}
+e<-unique(d[c("originaltopic","haldtopic","topic_order","topic_use","topic_discipline","topic_majortaxon","topic_label", "ecology_paper", "evolution_paper")])
+s3<-merge(s2, e, by.x="haldtopic", by.y="haldtopic")
+s3 <- s3[order(s3$topic_order, s3$year),]
+length(unique(s3$haldtopic)) #Check all topics are still present
+```
+If continuing on to Haldane analysis export to CSV for Haldane analysis
+```{r}
+HDs3<-s3[c(1,2,5,6,7,10,11,13,14,15)]
+names(HDs3)[1] <- "variable"
+names(HDs3)[4] <- "mean"
+names(HDs3)[5] <- "sd"
+names(HDs3)[7]<-"population"
+#HDs3<-HDs3%>%
+#filter(variable=="topic1")
+write.csv(HDs3,"Haldane_summary_stats.csv")
+```
+Change date format
+```{r}
+s3$year <- ymd(sprintf("%d-01-01",s3$year))
+````
+###Subset Data
+Subset by date and add rolling means
+```{r}
+s4<-subset(s3, year>="1850-01-01" & year<="2010-01-01")
+s4<- s4 %>% group_by(topic_label) %>% mutate(rollmean = rollmean(x = proportion_present, 5, align = "right", fill = NA))
+```
+Subset evolution topics for plot 1
+```{r}
+evolution<-subset(s4, topic_label == "natural selection & adaptation" | topic_label =="speciation")
+```
+Subset phylogenetics and population genetics topics for plot 2
+```{r}
+phylogenetics<-subset(s4, topic_label == "phylogenetics" | topic_label == "molecular population genetics" | topic_label == "phylogenetics molecular" | topic_label == "population genetics 1")
+```
+Subset behavioural topics  for plot 3
+```{r}
+behaviour<-subset(s4, topic_label =="optimal foraging" | topic_label =="parental care" | topic_label=="social behaviour 1")
+#all.life.history. Add this prior to scoring p(appearing)
+```
+Subset Ecology for plot 4
+```{r}
+ecology<-subset(s4, topic_label=="macroecology 1" | topic_label=="macroecology 2"| topic_label=="community ecology")
+```
+Subset Climate Change and Conservation for plot 5
+```{r}
+conservation<-subset(s4, topic_label=="climate change" | topic_label=="conservation")
+```
+Make Colour Palettes
+```{r}
+palette<-c("sienna2", "steelblue", "palegreen4", "violetred4", "yellow3")
+```
+###Make Plots
+Make Evolution plot
+```{r}
+evolution.plot<- ggplot(data=evolution, aes(colour=topic_label))+
+geom_point(data=evolution, aes(x=year, y=proportion_present, colour=as.factor(topic_label)), size=2, alpha=0.25)+ 
+geom_errorbar(data=evolution, aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present, colour=as.factor(topic_label)), size=1, alpha=0.25)+
+geom_line(data=evolution, aes(x=year, y=rollmean, colour=as.factor(topic_label)), size=1, alpha=1)+
+xlab("year")+
+ylab("p")+
+scale_colour_manual(values=c(palette))+  
+scale_x_date(breaks=as.Date(c('1859-01-01','1880-01-01','1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1850-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.15), breaks=seq(0, 0.15, 0.025))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_blank())+
+  labs(color="")
+evolution.plot
+#save_plot("evolution_plot.pdf", evolution.plot, base_width=5, base_height=5)
+```
+Make Phylogenetics plot
+```{r}
+phylogenetics.plot<- ggplot()+
+geom_point(data=phylogenetics, aes(x=year, y=proportion_present, colour=as.factor(topic_label)), size=2, alpha=0.25)+ 
+geom_errorbar(data=phylogenetics, aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present, colour=as.factor(topic_label)), size=1, alpha=0.25)+
+geom_line(data=phylogenetics, aes(x=year, y=rollmean, colour=as.factor(topic_label)), size=1, alpha=1)+   
+xlab("year")+
+ylab("p")+
+scale_colour_manual(values=c(palette))+  
+scale_x_date(breaks=as.Date(c('1859-01-01','1880-01-01','1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1850-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.15), breaks=seq(0, 0.15, 0.025))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"))+
+  labs(color="")
+phylogenetics.plot
+#save_plot("phylogenetics_plot.pdf", phylogenetics.plot, base_width=5, base_height=5)
+```
+
+Make Ecology plot
+```{r}
+ecology.plot<- ggplot()+
+geom_point(data=ecology, aes(x=year, y=proportion_present, colour=as.factor(topic_label)), size=2, alpha=0.25)+ 
+geom_errorbar(data=ecology, aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present, colour=as.factor(topic_label)), size=1, alpha=0.25)+
+geom_line(data=ecology, aes(x=year, y=rollmean, colour=as.factor(topic_label)), size=1, alpha=1)+   
+xlab("year")+
+ylab("p")+
+scale_colour_manual(values=c(palette))+  
+scale_x_date(breaks=as.Date(c('1859-01-01','1880-01-01','1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1850-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.15), breaks=seq(0, 0.15, 0.025))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"))+
+  labs(color="")
+ecology.plot
+#save_plot("ecology_plot.pdf", ecology.plot, base_width=5, base_height=5)
+```
+Make Behaviour plot
+```{r}
+behaviour.plot<- ggplot(data=behaviour, aes(x=year, y=proportion_present, colour=as.factor(topic_label)))+
+geom_point(, size=2, alpha=0.25)+ 
+geom_errorbar(aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present, colour=as.factor(topic_label)), size=1, alpha=0.25)+
+geom_line(aes(x=year, y=rollmean, colour=as.factor(topic_label)), size=1, alpha=1)+ 
+xlab("year")+
+ylab("p")+
+scale_colour_manual(values=c(palette))+  
+scale_x_date(breaks=as.Date(c('1859-01-01','1880-01-01','1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1850-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.15), breaks=seq(0, 0.15, 0.025))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"),
+          panel.background = element_blank())+
+  labs(color="")
+
+behaviour.plot
+#save_plot("behaviour_plot.pdf", behaviour.plot, base_width=5, base_height=5)
+```
+Make Conservation plot
+```{r}
+conservation.plot<- ggplot(data=conservation, aes(color=(topic_label)))+
+geom_point(aes(x=year, y=proportion_present), size=2, alpha=0.25)+ 
+geom_errorbar(aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present), size=1, alpha=0.25)+
+geom_line(aes(x=year, y=rollmean), size=1, alpha=1)+   
+xlab("year")+
+ylab("p")+
+scale_color_manual(values=c(palette))+
+scale_x_date(breaks=as.Date(c('1859-01-01','1880-01-01','1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1850-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.15), breaks=seq(0, 0.15, 0.025))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"),
+          panel.background = element_blank())+
+  labs(color="")
+conservation.plot
+#save_plot("conservation_plot.pdf", conservation.plot, base_width=5, base_height=5)
+```
+
+Compile above plots together to produce a plot grid. #Due to confines of markdown, plot will not be visible in the below plotting square  save to disk to view plot grid.
+```{r}
+final.plot<- plot_grid(evolution.plot, phylogenetics.plot, behaviour.plot,ecology.plot, conservation.plot, labels = c('A', 'B', 'C', 'D', 'E', 'F'), label_size = 15, fig.width=22.5, fig.height=15, nrow=2, ncol=3) 
+plot(final.plot) 
+save_plot("topics_test.pdf", final.plot, base_width=22.5, base_height=15)
+```
+#Revolution variable plots
+Subset Topics discovered by variable analysis
+```{r}
+evorev1<-subset(s4, topic_label=="vertebrate paleontology 2" | topic_label=="fungi general" |topic_label=="animal parasitology" )
+evorev2<-subset(s4, topic_label == "palaeontology" | topic_label =="cell biology" | topic_label == "genomics"| topic_label=="taxonomy" | topic_label=="chromosomes")
+evorev3<-subset(s4, topic_label=="molecular population genetics" | topic_label=="palaeontology" | topic_label=="chromosomes")
+ecorev2<-subset(s4, topic_label=="animal anatomy" | topic_label=="plant community ecology" | topic_label=="plant morphology 1")
+```
+Make plots of rev causing topics
+```{r}
+evorev1.plot<- ggplot(data=evorev1, aes(color=(topic_label)))+
+geom_point(aes(x=year, y=proportion_present), size=2, alpha=0.25)+ 
+geom_errorbar(aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present), size=1, alpha=0.25)+
+geom_line(aes(x=year, y=rollmean), size=1, alpha=1)+   
+xlab("year")+
+ylab("p")+
+scale_color_manual(values=c(palette))+
+scale_x_date(breaks=as.Date(c('1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1900-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.35), breaks=seq(0, 0.35, 0.05))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"))+
+  labs(color="")
+evorev1.plot
+#save_plot("evorrev1_plot.pdf", evorev1.plot, base_width=5, base_height=5)
+```
+```{r}
+evorev2.plot<- ggplot(data=evorev2, aes(color=(topic_label)))+
+geom_point(aes(x=year, y=proportion_present), size=2, alpha=0.25)+ 
+geom_errorbar(aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present), size=1, alpha=0.25)+
+geom_line(aes(x=year, y=rollmean), size=1, alpha=1)+   
+xlab("year")+
+ylab("p")+
+scale_color_manual(values=c(palette))+
+scale_x_date(breaks=as.Date(c('1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1900-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.35), breaks=seq(0, 0.35, 0.05))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"))+
+  labs(color="")
+evorev2.plot
+#save_plot("evorev2_plot.pdf", evorev2.plot, base_width=5, base_height=5)
+```
+
+```{r}
+evorev3.plot<- ggplot(data=evorev3, aes(color=(topic_label)))+
+geom_point(aes(x=year, y=proportion_present), size=2, alpha=0.25)+ 
+geom_errorbar(aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present), size=1, alpha=0.25)+
+geom_line(aes(x=year, y=rollmean), size=1, alpha=1)+   
+xlab("year")+
+ylab("p")+
+scale_color_manual(values=c(palette, "yellow3"))+
+scale_x_date(breaks=as.Date(c('1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1900-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.35), breaks=seq(0, 0.35, 0.05))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"))+
+  labs(color="")
+evorev3.plot
+#save_plot("evorev3_plot.pdf", evorev3.plot, base_width=5, base_height=5)
+```
+```{r}
+ecorev2.plot<- ggplot(data=ecorev2, aes(color=(topic_label)))+
+geom_point(aes(x=year, y=proportion_present), size=2, alpha=0.25)+ 
+geom_errorbar(aes(x=year, ymin=proportion_present-sd_proportion_present,ymax=proportion_present+sd_proportion_present), size=1, alpha=0.25)+
+geom_line(aes(x=year, y=rollmean), size=1, alpha=1)+   
+xlab("year")+
+ylab("p")+
+scale_color_manual(values=c(palette, "yellow3"))+
+scale_x_date(breaks=as.Date(c('1900-01-01','1920-01-01','1940-01-01','1960-01-01','1980-01-01','2000-01-01')), date_labels = "%Y",  date_minor_breaks = "1 year",  limits = as.Date(c('1900-01-01','2010-01-01')))+
+scale_y_continuous(limits=c(0, 0.35), breaks=seq(0, 0.35, 0.05))+  
+theme_classic(base_size = 20)+
+   theme( legend.justification = c("left", "top"),
+          legend.position=c(0.005, 1.05),
+          legend.box.just = "left",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.text=element_text(size=18),
+          legend.key = element_rect(color = "transparent"),
+          panel.background = element_blank())+
+  labs(color="")
+ecorev2.plot
+#save_plot("ecorev2_plot.pdf", ecorev2.plot, base_width=5, base_height=5)
+```
+Plot revolution variable plots. Save to disk to view.
+```{r}
+rev.plot<- plot_grid(evorev1.plot,evorev2.plot, evorev3.plot, ecorev2.plot, labels = c('A', 'B', 'C', 'D'), label_size = 15, fig.width=15, fig.height=15, nrow=2, ncol=2) 
+plot(rev.plot) 
+save_plot("rev_topics.pdf", rev.plot, base_width=15, base_height=15)
+```
