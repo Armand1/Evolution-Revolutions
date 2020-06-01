@@ -1,0 +1,161 @@
+---
+title: "fitting gams EE data"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+####preamble
+Here we are going to fit, for each topic, a spline to the abs.hald.num as function of interval. We are then going to divide it by the interval in order to get the haldane rate. 
+
+#### libraries
+````{r}
+library(scales)
+library(plyr)
+library(reshape2)
+library(mgcv)
+library(ggplot2)
+library(data.table)
+```````
+####data
+`````{r}
+d<-read.csv("EEpapers_05_res.csv", header=TRUE)
+`````
+subset to just those midyears that are later than the startyears for topics
+````{r}
+z<-read.csv("Topic_starts.csv", header=TRUE)
+colnames(z)[3]<-"startyear"
+d<-merge(d, z, by.x="topic")
+d<-subset(d, midyear>startyear)
+````
+
+```{r}
+d.2 <- ddply(d, .(topic), summarise, N = length(abs.hald.num))
+min(d.2$N)
+```
+specify the data.  The x is interval, y is the abs.hald.number, grouping variable is topic
+````{r}
+y<-d$abs.hald.num
+dat<-as.data.frame(y)
+dat$x<-d$interval
+dat$topic<-d$topic
+``````
+find out how many samples we now have per topic
+
+````{r}
+checkall<- ddply(dat, .(topic), summarise,
+length.haldests =length(y),
+length.intervals =length(unique(x)))
+`````
+now we have to remove all topics with few data points.  There is one, topic 95 with only 3 intervals and another with 294. We are very interested in the other short topics such as molecular phylogenetics, so we operate to that minimum.
+````{r}
+dat<-subset(dat, !topic=="topic94")
+``````
+Now, let's look only at intervals 1: 30 since some of our topics don't have 110 years of intervals
+`````{r}
+dat<-subset(dat, x<=30)
+checkall<- ddply(dat, .(topic), summarise,
+length.haldests =length(y),
+length.intervals =length(unique(x)))
+```````
+
+The function below needs the same variable lengths. But now they differ, so let's pull out a random selection of the minimum, 345. This does mean that we throw away a lot of data on the other topics, but I think that the haldane gams will still be oK.
+````{r}
+dat2<-ddply(dat,.(topic),function(x) x[sample(nrow(x),255),])
+`````
+
+#### get one group
+````{r}
+dat.sub<-subset(dat2, topic=="topic100")
+max(dat.sub$x)
+plot(dat.sub$x, dat.sub$y)
+``````
+#### fit a spline
+
+since the x (interval) variable, and the spline points along it are the same in all cases, we can cheat and specify one set of them.  We fit spline points at 10 year intervals (we have previously fitted the maximum allowed by the data) to describe how abs.hald.rate varies as a function of interval. This function forces the spline through (0,0)
+```{r}
+s<-seq(from=0, to=30, length.out=10) # sequence for knots
+knots <-data.frame(x=s) # sets number of knots
+sm <- smoothCon(s(x,k=10,bs="cr"),dat.sub, knots=knots)[[1]]
+X <- sm$X[,-1] ## spline basis 
+S <- sm$S[[1]][-1,-1] ## spline penalty 
+off <- dat.sub$y*0 + 0 ## offset term to force curve through (0, 0)
+````
+iterate the model across all groups
+```{r}
+modelList2<-dlply(dat2, "topic", function(topic) gam(y ~ X - 1 + offset(off),paraPen=list(X=list(S)), se.fit=TRUE, data=topic))
+````
+make a new set of data to predict the splines.  We'll predict them at half-yearly intervals
+```{r}
+x<-seq(from=0, to=30, length=61) #make a new set of indepdendnt variables
+newData <- data.frame(x) #put in a dataframe
+names(newData) <- c("x")
+````
+predict the constrained gam
+```{r}
+Xp <- PredictMat(sm,data.frame(x=x))[,-1] #make a set of spline points from those new independent variables
+pred<-ldply(modelList2, function(model) {
+  data.frame(newData, predict(model,list(X=Xp,off=rep(0,61)), se.fit=TRUE)) #predict
+})	
+````
+get haldane rates and plot
+```{r}
+pred$hald.rate<-pred$fit/pred$x
+````
+
+plot of abs.hald.rate gams
+````{r}
+ggplot(pred,aes(x=x,y=fit,group=as.factor(topic))) + geom_path(colour="red", alpha=0.5) + 
+theme(legend.position="none") + xlab('interval') + ylab('fit')
+````
+
+plot of haldane rate gams
+`````{r}
+ggplot(pred,aes(x=x,y=hald.rate,group=as.factor(topic))) + geom_path(colour="red", alpha=1, size=0.1) + 
+theme(legend.position="none") + xlab('interval') + ylab('haldane rate')
+````
+
+get topic labels and merge with pred. Remember: the topic labels of the gams are haldtopics
+```{r}
+d<-fread("topiclabels_4.csv", header=TRUE)
+d<-as.data.frame(d)
+d<-d[c("topic_number","use", "topic_discipline", "topic_majortaxon","topic_label")]
+d$topic_number<-paste("topic", d$topic_number, sep="")
+e<-fread("topicnames.csv", header=TRUE)
+e<-as.data.frame(e)
+e<-e[c("originaltopic","haldtopic", "order")]
+e<-merge(e,d, by.x="originaltopic", by.y="topic_number")
+pred<-merge(pred,e, by.x="topic", by.y="haldtopic")
+`````
+look at the 10 year rates
+```{r}
+int10<-subset(pred, x==10)
+int10 <- int10[order(-int10$hald.rate),]
+`````
+look at the 25 year rates
+```{r}
+int25<-subset(pred, x==25)
+int25 <- int25[order(-int25$hald.rate),]
+hist(int25$hald.rate)
+`````
+
+```{r}
+head(int10)
+head(int25)
+rates<-int10[c(1,2,3,5,6,11)]
+ratesb<-int25[c(1,2,3,5,6,11)]
+rates<-rbind(rates, ratesb)
+rates$haldtopic<-rates$topic
+z2<-z[c(2,3)]
+rates<-merge(rates, z, by.x="haldtopic")
+rates<-rates%>%
+  filter(topic_label=="macroecology 1" | topic_label=="conservation" | topic_label=="conservation" | topic_label=="phylogenetics molecular" | topic_label=="climate change" | topic_label=="molecular population genetics" | topic_label=="optimal foraging" | topic_label=="phylogenetics" | topic_label == "natural selection & adaptation" | topic_label =="parental care" | topic_label =="social behaviour 1" | topic_label=="population genetics 1" | topic_label =="speciation" | topic_label=="community ecology" | topic_label=="macroecology 2")
+rates<-arrange(rates, topic_label)
+write.csv(rates, "Haldane rates & start years.csv")
+```
+
+```{r}
+write.csv(pred, file="EEdata_05_haldrates.csv", row.names=FALSE)
+```
+
+
