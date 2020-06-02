@@ -6,7 +6,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ####preamble
-Here we are going to fit, for each topic, a spline to the abs.hald.num as function of interval. We are then going to divide it by the interval in order to get the haldane rate. 
+Here we are going to fit, for each topic, a spline to the absolute haldane number as a function of the interval. We are then going to divide it by the interval in order to get the haldane rate. 
 
 #### libraries
 ````{r}
@@ -21,7 +21,7 @@ library(data.table)
 `````{r}
 d<-read.csv("EEpapers_05_res.csv", header=TRUE)
 `````
-subset to just those midyears that are later than the startyears for topics
+subset to just those midyears which are later than the startyears for each topi
 ````{r}
 z<-read.csv("Topic_starts.csv", header=TRUE)
 colnames(z)[3]<-"startyear"
@@ -33,7 +33,7 @@ d<-subset(d, midyear>startyear)
 d.2 <- ddply(d, .(topic), summarise, N = length(abs.hald.num))
 min(d.2$N)
 ```
-specify the data.  The x is interval, y is the abs.hald.number, grouping variable is topic
+specify the data for the splines.  The x is interval, y is the abs.hald.number, grouping variable is topic
 ````{r}
 y<-d$abs.hald.num
 dat<-as.data.frame(y)
@@ -47,11 +47,11 @@ checkall<- ddply(dat, .(topic), summarise,
 length.haldests =length(y),
 length.intervals =length(unique(x)))
 `````
-now we have to remove all topics with few data points.  There is one, topic 95 with only 3 intervals and another with 294. We are very interested in the other short topics such as molecular phylogenetics, so we operate to that minimum.
+Remove all topics with few data points.  There is only one, topic 94 which has 3 intervals. Many of the topics which we are interested in include molecular topics which have very few intervals. Therefore the minimum is set such that they are still present.
 ````{r}
 dat<-subset(dat, !topic=="topic94")
 ``````
-Now, let's look only at intervals 1: 30 since some of our topics don't have 110 years of intervals
+Since some of our topics don't have 110 years of intervals and haldane rate changes over time we will only look at intervals 1:30 to maintain a fair comparison
 `````{r}
 dat<-subset(dat, x<=30)
 checkall<- ddply(dat, .(topic), summarise,
@@ -59,20 +59,20 @@ length.haldests =length(y),
 length.intervals =length(unique(x)))
 ```````
 
-The function below needs the same variable lengths. But now they differ, so let's pull out a random selection of the minimum, 345. This does mean that we throw away a lot of data on the other topics, but I think that the haldane gams will still be oK.
+The function below needs the same length for each variable. Since topic lengths differ, we pull out a random selection of the minimum, 255. This results in the loss of a lot of data for longer topics, but the haldane gams will still be representative.
 ````{r}
 dat2<-ddply(dat,.(topic),function(x) x[sample(nrow(x),255),])
 `````
 
-#### get one group
+Subset to one group
 ````{r}
 dat.sub<-subset(dat2, topic=="topic100")
 max(dat.sub$x)
 plot(dat.sub$x, dat.sub$y)
 ``````
-#### fit a spline
+#### fitting a spline
 
-since the x (interval) variable, and the spline points along it are the same in all cases, we can cheat and specify one set of them.  We fit spline points at 10 year intervals (we have previously fitted the maximum allowed by the data) to describe how abs.hald.rate varies as a function of interval. This function forces the spline through (0,0)
+since the x (interval) variable, and the spline points along it are the same in all cases, we only specify one set of them.  We fit spline points at 10 year intervals (we have previously fitted the maximum allowed by the data) to describe how abs.hald.rate varies as a function of interval. This function forces the spline through the origin (0,0)
 ```{r}
 s<-seq(from=0, to=30, length.out=10) # sequence for knots
 knots <-data.frame(x=s) # sets number of knots
