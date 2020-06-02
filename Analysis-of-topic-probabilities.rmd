@@ -66,17 +66,6 @@ s3<-merge(s2, e, by.x="haldtopic", by.y="haldtopic")
 s3 <- s3[order(s3$topic_order, s3$year),]
 length(unique(s3$haldtopic)) #Check all topics are still present
 ```
-If continuing on to Haldane analysis export to CSV for Haldane analysis
-```{r}
-HDs3<-s3[c(1,2,5,6,7,10,11,13,14,15)]
-names(HDs3)[1] <- "variable"
-names(HDs3)[4] <- "mean"
-names(HDs3)[5] <- "sd"
-names(HDs3)[7]<-"population"
-#HDs3<-HDs3%>%
-#filter(variable=="topic1")
-write.csv(HDs3,"Haldane_summary_stats.csv")
-```
 Change date format
 ```{r}
 s3$year <- ymd(sprintf("%d-01-01",s3$year))
