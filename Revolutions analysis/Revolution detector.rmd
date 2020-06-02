@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```
 #### preamble
 This reproduces the revolutions analysis pipeline given in On Revolutions. We are going to use our data set comprising every paper available on JSTOR. The script was written by Matthias Mauch and modified by Ben Lambert, Armand Leroi, Marina Papadopolou & Sam McKay. 
-See blog post by Ted Underwood critiquing the orginal Mauch et al. 2015 method; this revised method incorporates Underwood's recommended permutation on the diagonal https://tedunderwood.com/2016/02/07/you-say-you-found-a-revolution/
+See blog post by Ted Underwood critiquing the original Mauch et al. 2015 method; this revised method incorporates Underwood's recommended permutation on the diagonal https://tedunderwood.com/2016/02/07/you-say-you-found-a-revolution/
 install.packages("nloptr")
 #### libraries
 ```{r}
@@ -32,33 +32,29 @@ library(data.table)
 options(mc.cores=parallel::detectCores())
 ```
 #### data
-The data are LONG form.
+Load data. The dataframe is in long form
 ```{r}
 d<-fread("EEpaperslong.csv", header=TRUE)
 ```
+subset data to year range of 1900 -> 2010. This removes the issues of accession lag and JSTOR's lack of early coverage.
+```{r}
+d1<-subset(d, year >=1900 & year <=2010)
+`````
 If desired subset data to ecology or evolutionary biology
 ```{r}
 #d1<-subset(d,  evolution_paper==1)
-```
-If desired subset data to topic use
-````{r}
-#d1<-subset(d1, topic_use==1 & topic_discipline=="evolutionary biology")  #& , 
-`````
-subset data to year range
-````{r}
-d1<-subset(d, year >=1900 & year <=2010)
-`````
+#d1<-subset(d, ecology_paper==1
+``` 
 Call number of papers
-````{r}
+```{r}
 length(unique(d1$paper_id))
 `````
-Call number of topics
-````{r}
-length(unique(d1$originaltopic))
-
+Call number of topics. Number should be 170 if all topics are present
+```{r}
+length(unique(d1$originaltopic)
 `````
 Summarize data by topic and year
-````{r}
+```{r}
 d2 <- ddply(d1, .(topic_label, year), summarise, mean=mean(prob))
 ``````
 Reshape data to wide format
@@ -66,10 +62,10 @@ Reshape data to wide format
 d3<-dcast(d2,year~topic_label, value.var="mean")
 ```
 #### make distance matrix among years
-The next step is to make a distance matrix between years. We are going to use Jensen-Shannon distance, a symmetrized version of KL divergence, and make a heatmap.  It comes in two versions: undifferenced and differenced.
+The next step is to make a distance matrix between years. We are going to use Jensen-Shannon distance, a symmetrized version of KL divergence, and make a heatmap. This can be performed on differenced and undifferenced data.
 
 ##### Difference and standardise data
-Rho calculation - Remove #s to run, will take a long time
+Persistence calculation - Remove #s to run. This will take a long time.
 ```{r}
 N <-nrow(d3)#Length of our time series
 K <-ncol(d3) #K represents the number of variants each of which is a time series of length N
@@ -81,7 +77,7 @@ model <- stan_model("Rho.stan")
 
 ```
 
-If Rho >0.25 difference data then standardize the frequencies of the data to account for missing topics.
+If Rho average is >0.25 then persistence of data is high and data should be differenced followed by standardizing the frequencies of the data to account for missing topics.
 ```{r}
 d4<-data.frame(diff(as.matrix(d3), differences=1))  #If Rho <0.25 d4<-d3
 d4$year<-NULL
@@ -112,7 +108,7 @@ dm.s<- dm.ut.s + dm.lt.s
 dm.s<-sqrt(dm.s)
 dm<-dm.s
 ````
-Heatmap of distances between years
+Plot heatmap of distances between years
 ````{r}
 dmh<-melt(dm)
 names(dmh)<-c("year1", "year2", "distance")
@@ -131,7 +127,7 @@ hplot
 #ggsave("Heatmap_of_distances_across_all_years.png")
 ``````
 ### Foote Novelty estimation
-This is a single large function which takes the distance matrix, dm, and FN over all kernal widths, does the bootstrapping on the diagonals, and then gets the significance thresholds. 
+This is a single large function which takes the distance matrix, dm, and FN over all kernal widths, does bootstrapping on the diagonals, and then calculates the significance thresholds for revolutions and periods of conservation. 
 ```{r}
 novelty.analysis <- function(dm, width.vector = c(1,2,3), ft.save.drcty = "foote.results.csv",
                              th.save.drcty = 'foote.thresh.csv', n.boot = 1000)
@@ -273,16 +269,16 @@ list.to.return <- list()
 }
 ```
 #### Run the FN calculator. 
-We are going to do this for all kernal widths that the data alow, so we need to calculate that.
+We are going to do this for all kernal widths that the data allows - max_k. Therefore this must be calculated first.
 ```{r}
 #calculate max_k, and use as upperlimit on k
 max_k<-floor((length(unique(rownames(dm)))-2)/2)
-#Set the range of kernal half-widths you want to use, we are going to use all allowed 
+#Specify series of kernals over which you want to calculate foote novelty. 
 foote.results<-novelty.analysis(dm, c(1:max_k))
 ```
 
 #### FN plot 
-With revolutions in red, conservative periods in blue, and FN values in shades of grey
+Plot foote novelty with revolutions in red, conservative periods in blue and foote novelty in shades of grey
 ```{r}
 t<-foote.results$Thresh
 td<-as.data.frame(t)
@@ -342,7 +338,7 @@ revconsperiods
 ````
 
 #### estimate the expected number of False Positives
-We are carrying out MANY significance tests.  So, by we'll expect to get quite a few by chance alone.  To claim that there is a revolution, we want the observed number of significance tests to be greater than the number of tests observed by chance alone. To do this, we calculate the number of FN estimates that we've made, then how many of them might be signficant by chance along, and then how many of them were.
+We are carrying out MANY significance tests.  So, we'll expect to get quite a few positives by chance alone.  To claim that there is a revolution, we want the observed number of significance tests to be greater than the number of tests observed by chance alone. To do this, we calculate the number of FN estimates that we've made, then how many of them might be signficant by chance along, and then how many of them were.
 ````{r}
 FNcount<-length(res2$foote.novelty[!is.na(res2$foote.novelty)])
 sig<-subset(res2, revcons=="rev")
