@@ -1,0 +1,401 @@
+topic_number,use,topic_discipline,topic_majortaxon,topic_label,topic_abbrev,word1,word2,word3,word4,word5,word6,word7,word8,word9,word10,word11,word12,word13,word14,word15,word16,word17,word18,word19,word20,word21,word22,word23,word24,word25,word26,word27,word28,word29,word30
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+81,1,anatomy,animal,animal anatomy,aa,dorsal,later,ventral,anterior,segment,posterior,margin,spine,fig,eye,view,distal,seta,row,long,surfac,side,bodi,length,caudal,left,medial,pair,leg,head,canal,plate,short,extend,proxim
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+134,1,"cell, developmental biology, physiology",animal,animal communication,acm,signal,call,respons,visual,neuron,behavior,cue,frequenc,learn,sound,vocal,anim,communic,record,stimuli,respond,stimulus,detect,brain,function,sensori,acoust,neural,alarm,attract,system,pheromon,playback,odor,experi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+128,1,ecology,animal,animal diets,ad,feed,weight,day,burrow,fed,food,diet,pellet,digest,anim,gut,fecal,content,feeder,ingest,dri,fece,bodi,collect,hour,weigh,period,mean,intestin,nutrit,contain,tract,intak,activ,meal
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+181,1,ecology,animal,animal field ecology,afe,plot,year,gees,goos,subplot,control,rust,cut,remov,ground,gosl,sampl,measur,random,field,total,establish,mean,juli,hoe,uncut,caerulescen,greater,count,cover,area,chang,app,term,june
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+101,1,conservation & management biology,plant,agriculture,agr,weed,crop,herbicid,field,resist,rice,wheat,corn,agricultur,yield,glyphos,soybean,tillag,wild,system,manag,cultiv,farm,product,maiz,common,rotat,reduc,cultivar,row,sci,oat,practic,domest,barley
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+59,1,NA,animal,amphibians,amp,pond,frog,amphibian,cave,toad,rana,anuran,terrestri,bufo,reptil,breed,newt,aquat,declin,leopard,bullfrog,habitat,herpetolog,popul,green,marinus,anim,water,wetland,semlitsch,copeia,call,blaustein,perman,leg
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+93,1,"cell, developmental biology, physiology",animal,animal metabolism,amt,anim,blood,bodi,level,physiolog,metabol,fat,muscl,hormon,tissu,inject,plasma,activ,heart,measur,vertebr,liver,receptor,skin,testosteron,mass,clinic,brain,lung,function,chang,free,serum,physiol,implant
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+99,1,conservation & management biology,animal,agricultural pest control,apc,control,biotyp,aphid,pest,spray,applic,agent,pesticid,insecticid,appl,appli,alfalfa,pea,efficaci,field,releas,suppress,suscept,reduc,popul,treat,ddt,kill,cotton,infest,residu,orchard,ar,enemi,hpa
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12,1,ecology,plant,alpine plant ecology,ape,snow,meadow,sedg,carex,alpin,mat,cover,veget,shrub,ground,wet,moss,area,layer,depth,vaccinium,salix,bog,soil,tussock,plant,dri,heath,form,surfac,domin,cushion,communiti,moist,grow
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+45,1,anatomy,animal,animal morphometrics,apm,length,morpholog,shape,width,head,wing,pattern,measur,charact,variat,bodi,development,asymmetri,function,develop,symmetri,morphometr,digit,ontogeni,chang,tail,evolut,ontogenet,form,mor,dimens,theropod,ratio,size,symmetr
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+89,1,ecology,animal,animal parasitology,apr,host,parasit,infect,preval,nematod,parasitolog,worm,parasitoid,specif,intens,helminth,transmit,flea,life,para,infest,cycl,trematod,parasitol,coevolut,examin,associ,interact,intermedi,live,ectoparasit,intestin,spp,transmiss,cercaria
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+153,1,ecology,NA,arctic ecology,arc,arctic,alaska,phenolog,tundra,greenland,flush,ice,warm,reindeer,lem,alpin,barrow,polar,alp,boreal,culm,alaskan,northern,churchil,climat,fairbank,subarct,svalbard,chapin,alpina,season,latitud,summer,juli,canadian
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+147,1,"cell, developmental biology, physiology",animal,animal reproductive physiology,arp,mass,bodi,sperm,fertil,telomer,test,soc,vesicl,proc,testi,ejacul,length,semin,reproduct,size,storag,lond,store,competit,oviduct,evolut,parker,contrast,press,tract,organ,genit,cerebr,brain,harvey
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8,1,NA,animal,arthropods,art,spider,arthropod,mite,web,grasshopp,leg,nymph,cricket,instar,orthoptera,insect,adult,cannib,silk,field,aranea,pitfal,tribolium,orb,spi,thread,cockroach,collect,individu,scorpion,arachnolog,construct,laboratori,captur,dengu
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+149,1,geography & chemistry,NA,atmospheric chemistry,atc,carbon,atmospher,ecosystem,flux,product,nitrogen,cycl,global,emiss,net,elev,measur,rate,respir,soil,model,gas,terrestri,storag,deposit,biomass,estim,sink,concentr,fixat,usa,system,phytologist,npp,process
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,1,ecology,animal,bird ecology,be,habitat,warbler,bird,abund,vireo,thrush,jay,ground,point,common,field,breed,type,yellow,select,area,northern,count,bulletin,north,record,scrub,associ,census,robin,suitabl,bunt,distribut,black,cardin
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+31,1,NA,animal,bird general 1,bg1,plover,heron,shorebird,dove,tortois,egret,waterbird,sandpip,pipe,grebe,playa,neck,mexico,mesquit,cactus,mourn,snowi,burger,gutheri,curlew,calidri,snakewe,black,cacti,ibis,charadrius,kitten,wader,opuntia,brant
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+48,1,NA,animal,bird general 2,bg2,bird,avian,sparrow,wing,feather,flock,plumag,tit,ornitholog,auk,tail,blue,color,bobwhit,passerin,finch,flight,flycatch,great,molt,red,white,chicken,breed,condor,swallow,black,quail,starl,blackbird
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+180,1,NA,animal,bird general 3,bg3,bill,bait,nois,pig,throat,hummingbird,breast,white,parrot,shrike,feral,yellow,guild,net,aerial,mist,rump,insectivor,bird,forag,red,skutch,behavior,swift,tanag,ornithol,rufous,back,ficken,black
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+30,1,conservation & management biology,animal,north american big game ecology,bge,bear,wildlif,canada,usa,wolf,black,manag,wolv,park,north,canadian,nation,montana,columbia,alaska,ontario,northern,bulletin,report,grizzli,alberta,servic,washington,brown,editor,idaho,western,depart,yellowston,fish
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+68,1,conservation & management biology,animal,big game management,bgm,deer,wildlif,tail,white,manag,elk,sheep,anim,winter,wildl,moos,ungul,fawn,bighorn,herd,mule,game,brows,habitat,horn,caribou,park,bison,wild,hunt,popul,select,hors,bulletin,pronghorn
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+83,1,ecology,animal,bird life history 1,blh1,breed,pair,year,success,young,season,date,territori,period,box,fledg,fledgl,breeder,popul,arriv,lay,earli,clutch,area,great,day,size,late,hatch,bird,ing,attempt,band,food,reproduct
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11,1,ecology,animal,bird life history 2,blh2,nest,brood,nestl,success,day,cowbird,incub,fledg,egg,chick,hatch,rate,visit,parent,site,head,martin,cuckoo,brown,bulletin,behavior,build,auk,artifici,daili,depred,failur,condor,wren,abandon
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+62,1,ecology,animal,bird migration 1,bm1,direct,speed,movement,wind,field,move,forc,orient,distanc,flight,mechan,veloc,flow,behavior,motion,posit,phys,line,magnet,phase,surfac,angl,perform,rotat,measur,current,contact,power,vertic,track
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184,1,ecology,animal,bird migration 2,bm2,migrat,captur,band,movement,mark,migrant,recaptur,migratori,resid,spot,tag,move,individu,transmitt,distanc,radio,releas,day,net,return,locat,winter,rout,long,ground,behavior,stripe,arriv,white,area
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+120,1,evolutionary biology,animal,bird song,bs,song,snake,sing,type,note,vocal,record,repertoir,mimicri,syllabl,whistl,tongu,mimic,venom,dialect,frequenc,svl,articular,khz,chorus,music,pattern,reptil,trill,variat,sang,complex,tendon,learn,kroodsma
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+163,1,NA,plant,botany 1,bt1,plant,phytologist,botani,flower,sunflow,grow,vascular,grown,legum,garden,eudicot,botan,greenhous,stem,gus,seed,bot,sativa,angiosperm,oleracea,medicago,higher,planta,root,individu,pot,common,shikim,produc,form
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+196,1,NA,plant,botany 2,bt2,bot,flora,sect,fern,botani,botan,herbarium,taxa,amer,pubesc,genus,taxon,var,volum,hook,leaflet,gray,subsect,genera,composita,ssp,vascular,section,atg,group,comb,herb,type,morpholog,asteracea
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+156,1,NA,animal,bats,bts,bat,caviti,roost,ear,entranc,turbin,activ,myoti,echoloc,fli,night,box,brown,select,hibern,big,forag,record,fuscus,flight,long,site,fatal,locat,fenton,barclay,wind,kunz,communal,chiroptera
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+174,1,"cell, developmental biology, physiology",NA,cell biology,cb,cell,cellular,organ,type,divis,form,develop,eukaryot,nucleus,cytoplasm,membran,nuclear,cycl,differenti,nuclei,microscopi,fusion,actin,structur,mitochondria,germ,format,stain,wall,electron,tumor,singl,plasmodium,filament,stage
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+56,1,conservation & management biology,NA,climate change,cc,climat,temperatur,precipit,model,warm,global,predict,variabl,environment,distribut,latitud,annual,limit,chang,mean,respons,factor,potenti,scenario,qtl,region,project,geograph,condit,gradient,futur,biom,map,current,environ
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+44,1,ecology,NA,community ecology,ce,competit,resourc,interact,nich,communiti,coexist,overlap,interspecif,competitor,compet,abil,limit,interfer,space,distribut,exploit,ecol,partit,structur,mechan,individu,intraspecif,nat,pattern,expect,environ,special,exclus,predict,theori
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+139,1,evolutionary biology,NA,chromosomes,chr,chromosom,diploid,genom,polyploid,tetraploid,origin,karyotyp,pair,chromo,somat,polyploidi,cytolog,chro,arm,ploidi,cytogenet,mosom,count,meiotic,meiosi,epigenet,progenitor,report,asexu,haploid,duplic,photoreceptor,complex,triploid,sexual
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+122,1,conservation & management biology,NA,conservation,con,conserv,wildlif,manag,protect,habitat,risk,biodivers,endang,assess,popul,monitor,threaten,nation,plan,status,loss,human,strategi,effort,impact,extinct,target,declin,current,unit,threat,list,approach,societi,requir
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+71,1,NA,animal,cetacea,ct,whale,dive,satellit,shark,trip,dolphin,beak,foot,sst,sight,cetacean,boat,record,durat,depth,boobi,marin,feed,logger,forag,mammal,track,auklet,mask,gannet,killer,locat,argo,surfac,mar
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+102,1,geography & chemistry,NA,coasts,cts,coastal,beach,coast,shore,delta,sea,inland,zone,bay,level,shorelin,eros,sediment,area,sand,earthquak,south,tide,profil,sandi,coastlin,tidal,accret,deposit,wave,locat,low,west,gulf,wind
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+92,1,ecology,NA,dune ecology,de,sand,dune,sandi,buri,burial,nurs,surfac,conidia,substrat,clay,facilit,crystallogr,arenaria,fusarium,myceli,basidiomycet,hemocyanin,mycelia,ascomycota,ascomycet,canescen,gypsum,reactant,deposit,stabil,frankenia,mulch,aspergillus,myco,fasola
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+57,1,ecology,NA,demography,dem,age,surviv,year,mortal,class,popul,rate,life,death,individu,cohort,older,die,annual,declin,specif,recruit,longev,histori,live,period,survivorship,demograph,span,probabl,earli,higher,young,analysi,dead
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+118,1,geography & chemistry,NA,deserts,des,desert,arid,rainfal,giant,arizona,bush,rain,dri,sonoran,semi,drought,annual,precipit,mexico,hot,stepp,fenestra,mesic,shrub,succul,tucson,environ,semiarid,fog,perenni,soldier,prick,chihuahuan,mojav,moistur
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+142,1,NA,NA,experimental design,ed,prefer,trial,choic,experi,select,transect,block,random,disk,test,attract,type,equal,avoid,place,artifici,disc,pair,clump,rank,choos,offer,side,experiment,expect,reject,conduct,posit,present,design
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+80,1,ecology,NA,experimental ecology,eec,treatment,experi,control,experiment,respons,treat,remov,interact,replic,reduc,level,affect,week,design,addit,anova,field,ment,pot,plant,growth,perform,statist,day,block,total,manipul,mean,analysi,initi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+50,1,evolutionary biology,NA,experimental evolution,eev,wild,line,strain,fli,drosophila,melanogast,experi,generat,day,type,cage,laboratori,rear,wolbachia,develop,control,imprint,cross,assay,adult,produc,simulan,test,progeni,vial,transfer,replic,condit,second,linker
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+144,1,"cell, developmental biology, physiology",animal,animal embryology,emb,egg,clutch,hatch,lay,femal,incub,embryo,day,laid,develop,stage,yolk,embryon,earli,oviposit,period,adult,hatchl,mean,produc,initi,second,deposit,surviv,complet,late,volum,success,week,field
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+185,1,"cell, developmental biology, physiology",animal,endocrinology,end,volum,gland,secret,yellow,elegan,gill,cystein,tyrosin,coil,morphotyp,mantl,superfamili,epithelium,caenorhabd,protoplast,duct,slug,helix,lectin,adhes,ectoderm,secretori,mucus,stain,synaps,lamella,cop,bursa,string,decor
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+162,1,"cell, developmental biology, physiology",NA,animal energetics,eng,product,energi,weight,valu,metabol,total,rate,dri,oxygen,calcul,content,effici,produc,measur,respir,consumpt,amount,estim,net,requir,loss,atp,averag,yield,respiratori,unit,equat,organ,higher,pro
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+98,1,ecology,"fungi, bacteria, viruses",epidemiology,ep,infect,diseas,virus,resist,immun,pathogen,transmiss,strain,viral,antigen,drug,human,suscept,virul,vaccin,infecti,patient,antibodi,mhc,hiv,vector,malaria,epidem,respons,immunolog,med,host,proc,epidemiolog,emerg
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+25,1,conservation & management biology,NA,ecosystem responses,er,chang,ecosystem,impact,shift,respons,global,long,term,event,trend,system,climat,declin,scale,process,year,dynam,environment,level,affect,alter,environ,interact,period,condit,region,decreas,decad,influenc,rapid
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+95,1,conservation & management biology,NA,environmental toxins,et,chemic,metal,oil,dose,toxic,concentr,pollut,contamin,exposur,toxin,environ,environment,lead,heavi,copper,level,report,compound,control,health,hydrocarbon,mine,wast,bioassay,sensit,expos,mercuri,atrazin,zinc,treat
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+87,1,evolutionary biology,NA,enzymes 1,ez1,activ,protein,enzym,reaction,acid,chem,amino,molecul,inhibit,structur,membran,bind,assay,substrat,biochem,residu,synthesi,molecular,chemic,presenc,peptid,bond,inhibitor,extract,compound,complex,evolut,biochemistri,vitro,form
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+187,1,evolutionary biology,NA,enzymes 2,ez2,leu,ala,enzym,pro,gel,arg,gli,val,band,ser,biochem,dehydrogenas,isozym,group,electrophoresi,sci,con,electrophoret,ulat,pop,tween,sds,examin,hemoglobin,phe,univ,dis,coa,aag,ident
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+16,1,conservation & management biology,animal,fish conservation and management,fcm,sea,marin,ocean,atlant,fisheri,pacif,deep,gulf,abund,fish,area,coast,shelf,north,bay,depth,catch,distribut,survey,pelag,current,coastal,report,water,offshor,bottom,mar,continent,ship,trawl
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+27,1,ecology,animal,field ecology wildlife,few,territori,fox,area,dog,locat,coyot,track,collar,den,kill,anim,carnivor,radio,lion,carcass,chickade,wildlif,activ,lynx,raccoon,crow,red,cougar,cub,size,behavior,rabi,cat,movement,distanc
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+35,1,ecology,plant,fire ecology,fir,fire,burn,pine,year,prescrib,fuel,post,unburn,manag,wildfir,sever,ponderosa,longleaf,savanna,regim,ecosystem,usa,frequenc,pre,charcoal,intens,suppress,landscap,veget,forest,woodi,restor,resprout,disturb,area
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20,1,ecology,NA,field ecology ,fld,site,sampl,survey,detect,collect,abund,count,locat,total,individu,estim,mean,random,select,comparison,conduct,analysi,identifi,statist,transect,sam,field,assess,design,monitor,point,measur,consist,provid,techniqu
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+41,1,conservation & management biology,plant,forest conservation,frc,forest,stand,pine,tree,manag,log,timber,hardwood,year,type,decidu,matur,forestri,aspen,plantat,cut,area,mix,clearcut,northern,conif,wood,understori,domin,boreal,clear,conifer,age,fir,succession
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+33,1,ecology,NA,forest ecology 1,fre1,height,stem,canopi,stand,diamet,crown,branch,snag,tree,measur,basal,structur,area,dbh,foliag,thin,mean,twig,tall,ground,volum,total,growth,live,vertic,averag,dead,class,dougla,oregon
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+177,1,ecology,NA,forest ecology 2,fre2,tree,woodi,bark,trunk,acacia,savanna,shrub,branch,area,forest,vine,dbh,thicket,bole,ground,site,common,woodland,dri,ectomycorrhiza,spp,grove,thorn,record,veget,borsch,young,season,grow,herbac
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+32,1,ecology,plant,forest ecology 3,fre3,seedl,gap,regener,canopi,establish,shade,sapl,growth,surviv,recruit,light,sprout,site,understori,toler,microsit,year,midstori,dynam,disturb,grow,emerg,height,mortal,ecol,tree,ling,stage,condit,regen
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+76,1,NA,animal,fish general,fsh,fish,salmon,fin,trout,spawn,fisheri,length,stickleback,zebrafish,cichlid,freshwat,teleost,bass,juvenil,gill,tank,ray,catfish,swim,minnow,brown,tuna,aquat,carp,school,soc,rainbow,salmo,salmonid,total
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+176,1,"cell, developmental biology, physiology",animal,fish physiology,fsp,salin,stock,cod,sea,baltic,fresh,salt,freshwat,brackish,nacl,psu,condit,osmot,toler,pco,fjord,low,inflow,gotland,semen,seawat,eyeless,environ,environment,ice,black,decreas,skagerrak,subsystem,guano
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+186,1,NA,"fungi, bacteria, viruses",fungi general,fun,fungi,fungal,spore,mycorrhiz,symbiont,fungus,colon,root,symbiosi,host,mycorrhiza,symbiot,hypha,associ,inocul,ectomycorrhiz,arbuscular,isol,amf,infect,read,mycelium,pathogen,hyphal,smith,inoculum,mycolog,sporul,specif,growth
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+47,1,ecology,NA,food webs,fw,food,consum,web,trophic,diet,feed,level,consumpt,resourc,anim,item,supplement,nutrit,stomach,eat,top,link,avail,chain,carnivor,cascad,sourc,herbivor,habit,interact,omnivor,ecosystem,invertebr,eaten,terrestri
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+155,1,ecology,animal,freshwater ecology 1,fwe1,stream,substrat,invertebr,aquat,drift,stone,water,freshwat,crayfish,habitat,organ,taxa,macroinvertebr,sampl,chironomid,gravel,fauna,anim,abund,terrestri,benthic,collect,current,net,run,riffl,bottom,larva,chironomida,gammarus
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,1,ecology,NA,freshwater ecology 2,fwe2,lake,alga,water,freshwat,diatom,aquat,daphnia,pond,cyst,green,sampl,algal,abund,distribut,zooplankton,rotif,plankton,great,total,littor,blue,reservoir,lough,occurr,fresh,anabaena,depth,common,magna,pulex
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+67,1,evolutionary biology,NA,genomics,gen,gene,protein,genom,express,sequenc,function,region,domain,transcript,specif,bind,amino,mutant,regul,encod,conserv,structur,cell,acid,homolog,famili,acad,duplic,element,arabidopsi,sci,mol,rna,posit,signal
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+65,1,geography & chemistry,NA,geographical information systems,gis,map,cgi,imag,pnas,analysi,area,select,locat,identifi,http,region,assess,model,resolut,detect,cover,scale,provid,variabl,databas,set,usa,landscap,remot,spatial,survey,system,type,org,class
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+121,1,conservation & management biology,NA,general management,gm,manag,develop,resourc,econom,servic,state,environment,polici,program,project,land,restor,plan,agenc,public,nation,system,social,sustain,govern,benefit,cost,provid,decis,improv,environ,communiti,technolog,valu,product
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+117,1,evolutionary biology,NA,genetics,gns,mutat,allel,genet,gene,genotyp,frequenc,loci,locus,recombin,polymorph,select,type,mutant,chromosom,generat,variant,expect,linkag,neutral,singl,evolut,invers,link,case,segreg,phenotyp,domin,inherit,proc,deleteri
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+69,1,ecology,plant,growth physiology,gp,shoot,branch,bud,ethylen,develop,growth,clone,rhizom,clonal,tomato,tiller,meristem,initi,plant,auxin,elong,produc,ramet,node,apic,length,stem,teosint,later,primordia,stolon,primari,form,stage,product
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+188,1,ecology,plant,grasslands 1,gr1,plant,perenni,spikelet,achen,annual,lolium,vulgari,floret,festuca,grass,flora,repen,lemma,poa,rosett,senecio,herb,bromus,plantago,ranunculus,glume,flower,pappus,dandelion,galium,polygonum,campanula,trifolium,veget,arvens
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+129,1,ecology,plant,grasslands 2,gr2,grass,prairi,forb,sagebrush,sage,cover,big,grassland,shrub,annual,perenni,year,idaho,greater,wheatgrass,percent,brush,manag,veget,season,mix,great,domin,tall,kochia,plain,western,plant,panicum,area
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,1,ecology,NA,growth rates,grt,growth,rate,grow,slow,length,matur,rapid,faster,curv,develop,period,initi,fast,measur,higher,maximum,grew,life,reach,low,limit,slower,increment,day,condit,physiolog,histori,individu,size,decreas
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+136,1,ecology,plant,gymnosperm ecology,gye,ring,spruce,cone,pinus,conif,fir,pine,tree,picea,needl,abi,balsam,glauca,white,glacier,boreal,year,gymnosperm,black,gdd,line,subalpin,betula,limit,ecoton,treelin,mariana,larix,age,width
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+169,0,NA,animal,human biology,hb,human,book,year,life,anim,man,world,histori,evolut,illus,live,modern,origin,great,york,work,darwin,centuri,languag,ago,earli,press,peopl,find,earth,long,call,chapter,cultur,thing
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5,1,ecology,NA,habitat fragmentation and metapopulations,hfm,patch,habitat,landscap,dispers,extinct,colon,occup,local,metapopul,occupi,connect,tick,persist,immigr,dynam,isol,probabl,distribut,fragment,sink,popul,qualiti,size,sourc,area,suitabl,individu,movement,hanski,anim
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29,1,ecology,plant,herbivory and plant pests,hpp,herbivor,plant,damag,defens,resist,herbivori,volatil,interact,chemic,induc,compound,against,defenc,alkaloid,respons,secondari,insect,attack,level,product,brassica,ecol,feed,produc,protect,wound,rapa,mechan,repel,glucosinol
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+9,1,geography & chemistry,NA,hydrology,hyd,water,surfac,depth,oxygen,deep,flow,measur,layer,volum,shallow,bottom,pressur,air,condit,dri,wet,evapor,loss,low,pump,solut,potenti,submerg,float,deeper,lower,chamber,vapor,fresh,period
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+104,1,ecology,NA,intertidal ecology,iec,marin,alga,mar,benthic,spong,organ,abund,algal,communiti,fauna,invertebr,worm,soft,structur,domin,sediment,bryozoan,bottom,polychaet,intertid,ecol,sea,mud,live,habitat,shallow,bay,anim,sampl,associ
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+171,1,NA,animal,insects eusocial hymenoptera,ieh,coloni,worker,bee,queen,wasp,social,insect,cast,honey,eusoci,hymenoptera,honeybe,societi,related,solitari,nest,soc,forag,produc,api,collect,behavior,mellifera,brood,swarm,ecol,task,singl,product,danc
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+159,1,"cell, developmental biology, physiology",animal,invertebrate embryology,iemb,stage,larva,develop,larval,spawn,shrimp,life,adult,matur,mar,crustacean,development,crustacea,oocyt,cycl,invertebr,juvenil,collect,earli,gonad,reproduct,marin,laboratori,bull,medusa,isopod,swim,releas,sampl,individu
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+152,1,ecology,NA,island biogeography,ilb,island,mainland,pacif,archipelago,endem,colon,land,galapago,ocean,insular,area,rail,extinct,isol,hawaiian,isla,islet,rhodopsin,biogeographi,diamond,hawaii,continent,philippin,distanc,guam,tectum,sea,polynesian,west,long
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+73,1,NA,animal,insects general,ins,emerg,insect,collect,entomolog,soc,adult,entomol,wing,coleoptera,locust,diptera,fli,flight,ent,bug,dap,june,weevil,spp,record,gambia,hydrilla,juli,ann,life,entomologist,proc,hemiptera,anophel,pupal
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+105,1,ecology,plant,invasive species,is,invas,nativ,weed,introduc,exot,invad,spread,establish,alien,success,thistl,impact,plant,control,knapwe,infest,potenti,introduct,weedi,releas,purpl,erad,propagul,nonnat,state,america,colon,loosestrif,ecol,usa
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22,1,"cell, developmental biology, physiology",animal,larval biology,lb,mosquito,tadpol,larva,larval,tiger,tank,metamorphosi,develop,stage,cpg,hyla,pipien,aed,development,metamorphos,experi,surviv,measl,aegypti,day,laboratori,culex,laevi,pituitari,versicolor,pole,mos,life,tail,treefrog
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,1,ecology,NA,life history,lh,adult,juvenil,femal,young,birth,age,popul,reproduct,sex,anim,individu,yearl,day,natal,year,pup,subadult,group,month,mother,matur,dispers,week,captur,born,male,immatur,calv,pregnanc,neonat
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+119,1,conservation & management biology,animal,livestock management,lm,graze,grassland,rangeland,pastur,cattl,manag,livestock,grass,veget,goat,product,mow,brome,year,ranch,plant,sheep,ltr,stock,fenc,intens,anim,land,exclosur,rancher,fescu,area,picloram,hay,forag
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+108,1,conservation & management biology,NA,land use,lu,area,land,cover,ing,landscap,wildlif,percent,survey,agricultur,con,locat,center,manag,ment,unit,usa,field,state,region,pro,edg,york,man,servic,nation,activ,depart,dis,serv,veget
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15,1,NA,"fungi, bacteria, viruses",microbiology,mb,bacteria,cultur,bacteri,strain,microbi,medium,microbiol,isol,microb,plate,environ,microbiolog,microorgan,incub,media,growth,yeast,agar,transfer,bacterium,degrad,cell,organ,grown,steril,dilut,produc,pseudomona,activ,micro
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+24,1,ecology,NA,macroecology 1,mc1,divers,communiti,rich,abund,sciencemag,composit,function,biodivers,structur,assemblag,ecosystem,gradient,relationship,environment,level,domin,ecol,higher,total,pattern,group,local,influenc,posit,measur,individu,explain,turnov,taxa,plant
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+168,1,ecology,NA,macroecology 2,mc2,scale,pattern,spatial,distanc,distribut,structur,random,local,aggreg,tempor,space,heterogen,locat,variat,individu,variabl,neighbor,point,process,correl,mean,posit,grid,influenc,nearest,dispers,analysi,autocorrel,vari,homogen
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+111,1,NA,animal,mammals general,mg,mammal,rat,rodent,mammalian,squirrel,cach,grid,redstart,vertebr,pocket,mus,gopher,mam,brown,cheek,kangaroo,session,foot,mammalog,anim,peromyscus,musculus,rattus,rattlesnak,mous,ground,chipmunk,woodrat,remov,hous
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+124,1,evolutionary biology,NA,molecular genetics 1,mg1,sequenc,clone,pcr,primer,isol,analysi,dna,min,amplifi,rrna,gel,amplif,detect,fragment,align,perform,extract,product,access,reaction,ribosom,sampl,type,librari,rdna,polymeras,phylogenet,describ,molecular,ident
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+166,1,NA,NA,molecular genetics 2,mg2,dna,pnas,network,probe,rna,lane,fragment,strand,structur,label,digest,eco,phage,natl,loop,posit,acad,influenza,band,blot,restrict,chain,asp,proc,sci,usa,thr,pair,singl,nucleotid
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+114,1,NA,animal,molluscs,mol,shell,snail,mussel,valv,gastropod,bivalv,hermit,intertid,mollusc,mollusk,shore,eduli,mytilus,mollusca,drill,marin,whorl,molluscan,live,anim,apertur,low,expos,gastropoda,vermeij,bed,limpet,rocki,height,individu
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+97,1,evolutionary biology,NA,molecular population genetics,mpg,dna,sequenc,genet,gene,genom,molecular,region,mitochondri,haplotyp,diverg,marker,sampl,analysi,mtdna,nucleotid,nuclear,mol,divers,individu,variat,microsatellit,substitut,lineag,fragment,restrict,repeat,analys,distanc,polymorph,primer
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+116,1,ecology,animal,marine ecology,mre,recruit,plate,pit,settlement,settl,barnacl,attach,panel,retina,coexpress,post,surfac,glue,barn,chirp,uta,ment,len,balanus,adult,crisp,tile,abor,space,bar,set,balanoid,ceram,cma,low
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+85,1,geography & chemistry,NA,marine geography,mrg,wave,storm,barrier,damag,lagoon,hurrican,bleach,break,wind,passag,inlet,shoal,event,cane,transport,engin,current,breakag,portug,knowlton,energi,surg,level,pass,sever,physic,impact,stm,airport,frequenc
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,1,NA,animal,marine turtles,mrt,turtl,green,facet,neural,hatchl,canari,loggerhead,snap,denticl,squamos,box,carr,reptil,ossif,ernst,fad,sternum,sea,fehr,carapac,tenerif,termini,madeira,ramp,fluke,gsc,canaria,gome,lupin,caretta
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+167,1,geography & chemistry,NA,mountains,mtn,mountain,elev,slope,valley,altitud,area,ridg,lower,face,zone,low,distribut,montan,rocki,lowland,higher,upper,plateau,steep,veget,aspect,topograph,altitudin,gradient,highland,hill,limit,rock,south,topographi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+125,0,NA,NA,NA,NA,africa,african,south,cape,eleph,east,kenya,southern,van,tanzania,nation,west,manate,madagascar,saharan,region,park,savanna,capensi,africana,ivori,london,namibia,town,gabon,tsets,zimbabw,foramina,provinc,area
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+113,0,NA,NA,NA,NA,china,japan,chines,wang,japanes,asia,nation,zhang,asian,chen,park,liu,tokyo,provinc,taiwan,institut,beij,yang,report,scienc,hong,japonica,sun,vietnam,korea,yunnan,zhou,academi,mongolia,kong
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+183,0,NA,NA,NA,NA,zealand,stopov,cormor,king,south,crest,albatross,moa,shag,shearwat,island,lrr,australi,hobson,nothofagus,magellan,wellington,auckland,waterbird,gizzard,doubl,record,willet,bird,sooti,emu,phalacrocorax,roseat,north,atkinson
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+54,0,NA,NA,NA,NA,fiber,marsupi,wale,sydney,lick,pitcher,sloth,tasmania,opossum,eucalyptus,fibr,australia,fig,canberra,australian,nsw,carnivor,melbourn,ficus,scratch,archer,pouch,equus,pepper,ed,adelaid,rspb,press,purpurea,woolli
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+60,0,NA,NA,NA,NA,australia,australian,south,endem,fauna,taxa,area,distribut,biogeographi,queensland,madagascar,world,biogeograph,victoria,western,dung,tropic,genera,contin,region,asia,group,pattern,america,terrestri,flora,land,dispers,sauropod,aus
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+146,0,NA,NA,NA,NA,depart,applic,program,societi,work,posit,institut,public,year,scientif,student,professor,interest,teach,scientist,scienc,school,field,experi,colleg,nation,meet,educ,opportun,candid,laboratori,book,state,graduat,cours
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+189,0,NA,NA,NA,NA,usepackag,document,cyr,empti,portland,normalfont,pifont,amssymb,sfdefault,mathrsf,amsmath,amsbsi,declaremaths,wncyss,amsxtra,newcommand,documentclass,encodingdefault,aastex,pagestyl,fontenc,stmaryrd,wncyr,declaretextfontcommand,selectfont,textcomp,textcyr,xspace,rmdefault,amsfont
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+173,0,NA,NA,NA,NA,europ,european,russian,sweden,norway,otter,finland,swedish,russia,endophyt,germani,english,denmark,part,northern,poland,eurasian,summari,german,norwegian,materi,soviet,nilsson,stockholm,andersson,siberian,ed,siberia,institut,lund
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+133,0,NA,NA,NA,NA,florida,turkey,swamp,americana,canadensi,common,everglad,wade,palustri,gainesvill,south,cypress,key,slough,viburnum,herb,north,puffin,aster,ohio,panther,boreali,tricolor,hammock,glade,southeastern,viola,miami,virginiana,blueberri
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+37,0,NA,NA,NA,NA,des,les,franc,pari,sur,recherch,dan,french,par,est,pour,universit,une,scientifiqu,cedex,esp,ces,naturell,centr,rue,chez,pas,laboratoir,belgium,aux,etud,qui,genr,cas,lfi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+170,0,NA,NA,NA,NA,system,organ,problem,theori,process,general,case,question,term,concept,point,view,work,approach,complex,consid,develop,exist,requir,fact,refer,con,form,reason,clear,principl,involv,interest,limit,provid
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+10,0,NA,NA,NA,NA,die,der,al,und,den,ein,das,mir,von,mit,ist,bei,des,tier,auf,sich,sie,hat,dem,auch,nur,ich,abb,nicht,nach,sind,durch,wie,aus,dies
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+197,0,NA,NA,NA,NA,der,und,von,die,des,germani,zur,berlin,zool,den,inst,aus,soc,ein,nat,ber,ges,bei,van,akad,fur,das,fischer,untersuchungen,stuttgart,somit,neue,beitrag,deutsch,bonn
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+66,0,NA,NA,NA,NA,region,north,south,america,northern,southern,eastern,distribut,geograph,western,central,east,west,latitud,local,pattern,origin,pacif,histori,atlant,provinc,coast,area,hemispher,subg,continent,expans,dispers,temper,contin
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+58,0,NA,NA,NA,NA,beetl,hawaii,hawaiian,volcan,erupt,crater,eel,volcano,lava,mount,mueller,leech,cole,honolulu,ash,carabid,galleri,bishop,geotherm,flow,carabida,tunnel,pratt,activ,polymorpha,mauna,gulch,wagner,horn,kaneshiro
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+96,0,NA,NA,NA,NA,cultur,women,india,salari,children,peopl,indian,villag,countri,men,econom,anthropolog,tuber,price,hospit,market,send,household,local,child,social,product,gather,tradit,trade,medicin,qualif,famili,human,health
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+26,0,NA,NA,NA,NA,puerto,rico,caribbean,cuba,spike,spur,jamaica,violet,bahama,indi,west,beliz,corona,antill,venus,trinidad,rican,dominican,florida,banana,republ,lesser,tyrannus,hispaniola,engel,medal,lantana,umbel,indian,cay
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+192,0,NA,NA,NA,NA,group,cluster,mediterranean,spain,itali,european,greec,europ,consid,area,region,main,distribut,czech,belong,central,iberian,italian,madrid,alp,franc,correspond,zircon,peninsula,republ,greuter,analysi,medit,character,barcelona
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+109,0,NA,NA,NA,NA,los,las,del,para,con,por,especi,una,asi,coffe,entr,como,ave,sobr,estudio,mas,est,durant,esta,manejo,bosqu,dos,sin,mayor,fue,volum,poblacion,uso,fueron,alta
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+110,0,NA,NA,NA,NA,rio,argentina,del,mexico,peru,chile,brazil,universidad,nacion,colombia,venezuela,andes,san,ecuador,bolivia,tyr,andean,america,instituto,central,ciencia,santa,lectotyp,amnh,bueno,south,grand,air,santiago,neotrop
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+140,0,NA,NA,NA,NA,record,ireland,london,britain,england,irish,ecotyp,isl,scotland,moor,cocklebur,royal,tab,distribut,wale,west,refer,cambridg,develop,local,north,edinburgh,dublin,investig,long,east,centr,flora,europ,favour
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+7,0,NA,NA,NA,NA,frond,res,plaqu,diffract,stack,pandem,disulfid,ferredoxin,pdb,lysat,nadph,ree,repressor,reson,sine,cao,germlin,cho,shin,maa,distribut,takahashi,rho,transduc,gao,okada,educa,reid,kobayashi,yamamoto
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+34,0,NA,NA,NA,NA,vita,aaa,tubulin,leukemia,webster,send,meyer,liverwort,retent,microtubul,rsa,gtp,refer,micrograph,cycad,loc,mentor,card,bryologist,globular,mendel,pal,lookup,nova,willdenowia,golgi,registr,societi,sinai,jim
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+36,0,NA,NA,NA,NA,xiv,israel,van,trp,heme,tab,saint,pis,lac,rostral,dat,moscow,primordi,tra,gct,jean,septum,sar,syn,tgg,cct,hydra,tes,issr,sei,jerusalem,cnrs,confoc,scr,soc
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+141,0,NA,NA,NA,NA,red,woodpeck,cockad,downi,hole,bed,vent,excav,seagrass,hairi,hydrotherm,caviti,flicker,conner,cock,endosymbiont,pecker,lure,peregrin,sts,decoy,jackson,florida,seep,marina,nbs,pika,picoid,arsenic,wood
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+182,0,NA,NA,NA,NA,form,appear,case,place,point,ibid,fact,seri,cent,general,close,line,condit,great,complet,part,side,consider,evid,materi,work,group,second,normal,figur,singl,mark,describ,remain,continu
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+46,0,NA,NA,NA,NA,california,san,santa,nevada,berkeley,sierra,oregon,diego,angel,francisco,los,calif,southern,cruz,pacif,valley,shrub,barbara,davi,baja,stanford,verd,cali,coast,sacramento,counti,fornia,californica,chaparr,coastal
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+64,0,NA,NA,NA,NA,york,carolina,bay,usa,virginia,georgia,louisiana,maryland,massachusett,mississippi,state,ed,press,jersey,alabama,jame,depart,florida,unit,connecticut,system,illus,delawar,north,savannah,colleg,center,chesapeak,rhode,send
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+123,0,NA,NA,NA,NA,state,texa,north,counti,univ,unit,report,illinoi,kansa,bull,wisconsin,plain,south,depart,missouri,michigan,dakota,iowa,colorado,survey,pennsylvania,oklahoma,nat,nebraska,west,eastern,central,sci,minnesota,great
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+100,1,ecology,NA,north american deserts,nad,station,pool,arizona,utah,rock,canyon,colorado,junip,cliff,shelter,mile,tucson,sta,distribut,cotton,collect,rocki,june,pinyon,mexico,crevic,mountain,logan,record,camp,nevada,juli,west,pile,common
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+39,1,ecology,plant,north american forests,naf,oak,quercus,red,tree,mapl,acer,white,snare,beech,tennesse,acorn,hardwood,appalachian,mast,eastern,kentucki,southern,virginia,arkansa,pennsylvania,cedar,hemlock,black,hickori,north,chestnut,barren,elm,rubrum,pine
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+28,1,evolutionary biology,NA,natural selection & adaptation,ns&a,select,evolut,genet,adapt,fit,evolutionari,phenotyp,variat,evolv,environ,trait,popul,direct,generat,proc,varianc,individu,chang,genotyp,correl,soc,herit,evol,environment,measur,mean,compon,quantit,interact,addit
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+154,1,anatomy,plant,non-vascular plants,nvp,moss,lichen,bryophyt,cortic,epiphyt,cortex,cam,vascular,thallus,ach,buck,thalli,alga,hedw,green,crust,ril,substrat,lang,vitt,form,olduvai,csa,rock,schuster,epi,algal,desicc,cladonia,cryptogam
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+161,1,"cell, developmental biology, physiology",NA,organic chemistry 1,oc1,acid,extract,lipid,methyl,compound,fatti,amino,composit,content,acet,column,peak,alcohol,analysi,liquid,profil,gas,ester,min,chromatographi,solvent,methanol,chemic,sampl,compon,acetyl,metazoan,amount,phyla,ether
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+145,1,geography & chemistry,NA,organic chemistry 2,oc2,organ,sediment,particl,oxygen,matter,concentr,dissolv,carbon,rate,flux,biofilm,cyanobacteria,environ,process,column,core,doc,measur,marin,microbi,inorgan,seawat,interfac,denitrif,woes,surfac,cycl,synechocysti,particul,transport
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+193,1,evolutionary biology,animal,optimal foraging,of,forag,cost,energi,rate,optim,strategi,food,effici,resourc,spent,energet,gain,feed,qualiti,intak,day,avail,search,predict,requir,budget,anim,benefit,maxim,expenditur,bout,valu,reserv,low,behavior
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+40,1,ecology,animal,polar bird ecology,pbe,chick,gull,tern,coloni,ice,antarct,penguin,seabird,polar,seal,herring,black,petrel,sea,antarctica,larus,common,island,kittiwak,southern,skua,sterna,bill,burger,bird,south,ring,adult,fur,breed
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+18,1,evolutionary biology,animal,parental care,pc,reproduct,offspr,parent,matern,life,brood,invest,condit,care,histori,cost,fecund,produc,fit,mother,qualiti,alloc,size,femal,ecol,effort,surviv,reproduc,product,success,individu,resourc,proc,soc,sibl
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+51,1,ecology,plant,plant community ecology,pce,veget,cover,type,disturb,communiti,domin,shrub,success,plant,composit,quadrat,succession,herbac,soil,structur,site,ecol,herb,area,veg,associ,characterist,woodi,transect,stand,florist,classif,form,frequenc,field
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+126,1,ecology,plant,plant ecology,pe,riparian,willow,oryza,monocot,oliv,populus,antisens,dicot,bamboo,cottonwood,phosphatas,salix,acyl,chinensi,poacea,saltcedar,fructos,qiu,panda,whoop,kellogg,glu,tamarix,degrad,mathew,xylos,galactos,clayton,triticea,hilu
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+157,1,evolutionary biology,NA,population genetics 1,pg1,popul,genet,variat,individu,divers,level,differenti,structur,geograph,popula,sampl,flow,popu,lation,distanc,frequenc,local,gene,isol,loci,allel,mean,low,valu,subpopul,heterozygos,variabl,polymorph,allozym,size
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+103,1,evolutionary biology,NA,population genetics of inbreeding,pgi,self,inbreed,system,outcross,depress,mate,incompat,compat,evolut,progeni,cross,rate,barrett,inbr,fertil,fit,charlesworth,breed,genet,famili,clarkia,level,popul,reduc,outbreed,individu,mix,pollin,guttatus,schiedea
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+115,1,ecology,plant,photochemistry,phc,light,radiat,dark,electron,measur,pigment,fluoresc,chloroplast,red,intens,irradi,solar,quantum,chlorophyl,photosynthet,spectra,evolut,wavelength,blue,absorpt,green,spectrum,spectral,excit,optic,state,astrophi,energi,illumin,shade
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+94,1,ecology,NA,phylogenetics molecular,phm,clade,phylogenet,lineag,evolut,molecular,phylogeni,analys,sister,sequenc,group,diverg,diversif,origin,support,morpholog,relationship,analysi,angiosperm,evolutionari,rbcl,genus,radiat,infer,trnl,evol,combin,align,major,ancestr,genera
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+172,1,ecology,plant,phenology,phn,temperatur,day,activ,heat,thermal,hour,period,night,daili,air,cold,cool,condit,diurnal,tem,mean,peratur,min,morn,warm,record,nocturn,ambient,ture,tempera,constant,photoperiod,circadian,rhythm,low
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+82,1,"cell, developmental biology, physiology",plant,photosynthesis,pho,photosynthesi,photosynthet,gas,stomat,exchang,measur,plant,conduct,rate,water,drought,chamber,air,carbon,pressur,physiolog,potenti,xylem,mpa,hydraul,mol,respons,rubisco,respir,transpir,net,assimil,vessel,valu,capac
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+43,1,evolutionary biology,NA,phylogenetics,phy,charact,tree,taxa,phylogenet,group,analysi,branch,relationship,parsimoni,taxon,phylogeni,morpholog,systemat,set,state,classif,topolog,bootstrap,code,node,taxonom,cladist,sequenc,outgroup,consensus,analys,length,combin,posit,support
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+42,1,"cell, developmental biology, physiology",animal,parasitic insects,pin,insect,larva,moth,butterfli,larval,feed,parasitoid,instar,gall,host,oviposit,lepidoptera,caterpillar,entomol,pupa,adult,attack,infest,wasp,develop,rear,outbreak,fli,cocoon,gypsi,pupat,defoli,entomolog,midg,phytophag
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+137,1,"cell, developmental biology, physiology",plant,plant life cycles,plc,pollen,fertil,ovul,morph,steril,develop,style,cross,hermaphrodit,ovari,gametophyt,angiosperm,pistil,embryo,endosperm,sporophyt,anther,capsul,stigma,produc,stamen,donor,matur,dioecious,type,grain,reproduct,stage,gamet,abort
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+53,1,ecology,NA,plankton ecology,ple,plankton,phytoplankton,copepod,fig,zooplankton,marin,diatom,ocean,bloom,mar,dinoflagel,product,copepoda,water,sampl,sea,limnol,res,chlorophyl,abund,oceanogr,upwel,ecol,ser,vertic,station,primari,mix,surfac,prog
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+84,1,evolutionary biology,NA,palaeontology,plo,fossil,extinct,record,earli,preserv,late,paleontolog,geolog,taxa,cretac,divers,cambrian,fauna,triassic,evolut,origin,live,evolutionari,extant,modern,permian,jurass,ed,paleobiolog,devonian,genera,marin,pattern,paleozo,press
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+49,1,ecology,plant,paleoclimatololgy,plt,core,date,pollen,pleistocen,record,modern,glacial,late,archaeolog,holocen,climat,period,evid,year,quaternari,age,histori,earli,deposit,chang,veget,reconstruct,fossil,sediment,site,ice,radiocarbon,ago,past,remain
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+148,1,"cell, developmental biology, physiology",plant,plant metabolism,pm,concentr,uptak,experi,rate,transport,solut,min,phosphat,nitrogen,cell,nitrat,fixat,glu,incub,kinet,low,addit,alga,medium,synthetas,ammonia,grown,measur,ammonium,inhibit,initi,filter,decreas,condit,centrifug
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+91,1,anatomy,plant,plant morphology 1,pm1,leaf,leav,area,plant,stem,dri,foliar,tissu,mass,growth,ratio,petiol,unit,total,mesophyl,sheath,lower,senesc,shoot,content,alloc,sla,root,higher,grow,nitrogen,matur,foliag,evergreen,low
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+150,1,anatomy,plant,plant morphology 2,pm2,long,type,color,lobe,hair,wall,surfac,apex,margin,brown,shape,white,layer,branch,wide,thick,outer,fig,yellow,section,bract,apic,glabrous,dens,vein,calyx,green,inner,morpholog,basal
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+160,1,ecology,plant,plant nutrients,pn,biomass,nutrient,nitrogen,limit,product,phosphorus,suppli,ratio,avail,ecosystem,low,growth,enrich,total,level,system,primari,aquat,input,fertil,addit,higher,communiti,concentr,eutroph,mass,qualiti,mesocosm,load,water
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+70,1,ecology,NA,population ecology,pne,densiti,popul,depend,low,abund,dynam,count,factor,declin,census,regul,fluctuat,den,higher,decreas,seri,mean,relationship,anim,siti,negat,lower,influenc,total,proport,affect,limit,lation,chang,crowd
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+158,1,"cell, developmental biology, physiology",plant,pollination biology 1,pob1,flower,pollin,floral,infloresc,pollen,nectar,visit,petal,corolla,anther,bee,orchid,plant,stamen,set,fruit,stigma,nectari,reproduct,perianth,visitor,anthesi,scent,product,insect,produc,attract,reward,seed,racem
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+106,1,"cell, developmental biology, physiology",plant,pollination biology 2,pob2,tube,grain,load,transfer,deposit,pin,gpa,slide,long,short,palp,dye,sclerit,flang,probosci,style,primula,genitalia,vertex,sardinia,femora,fine,deltoid,pronotum,microscop,heterostyli,elytra,chandra,coars,corsica
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2,1,ecology,animal,predator prey 1,pp1,predat,risk,prey,attack,behavior,respons,dation,escap,experi,refug,avoid,reduc,interact,presenc,goshawk,rate,activ,predatori,vigil,depred,preda,affect,vulner,experiment,pred,mortal,select,guppi,potenti,detect
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+135,1,ecology,animal,predator prey 2,pp2,prey,perch,item,feed,captur,type,predat,forag,handl,attack,diet,search,stomach,encount,oystercatch,success,select,consum,behavior,rate,respons,function,gape,strike,proport,clam,unidentifi,pike,profit,eaten
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+0,1,evolutionary biology,animal,primate evolution,pre,human,primat,brain,chimpanze,group,monkey,ape,social,puls,hum,cognit,anthropol,infant,gorilla,hominid,homo,evol,tool,press,neurosci,macaqu,evolut,pan,baboon,sci,face,hominin,facial,phys,cambridg
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+179,1,anatomy,plant,plant taxonomy,pt,subsp,var,sect,trichom,nov,bot,solanum,glandular,boiss,benth,euphorbia,cyperus,iran,echinochloa,vel,allianc,pax,alt,nom,nee,prov,cultiv,lam,solanacea,kilian,syn,engler,simplex,willd,ser
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+107,1,conservation & management biology,animal,raptor management,rap,harvest,hunt,owl,hawk,hunter,eagl,recoveri,wildlif,raptor,manag,spot,golden,fisher,popul,fish,murrelet,stork,pigeon,recov,falcon,report,raven,game,har,pelican,vultur,marbl,declin,usfw,osprey
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+88,1,ecology,animal,reptile ecology,ree,lizard,diet,squirrel,dietari,reptil,anoli,svl,bodi,shine,anol,ground,individu,categori,pianka,item,behavior,tail,arbor,season,reptilia,schoener,huey,habitat,overlap,vertebr,habit,special,proport,ecomorph,analysi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+61,1,NA,animal,reptiles and amphibia general,reg,salamand,tail,allig,herpetolog,reptil,snout,herpetologica,crocodil,gecko,copeia,amphibian,skin,iguana,wake,amphibia,herpetol,skink,plethodon,vent,gravid,terrestri,forelimb,cinereus,swab,red,maxson,vertebr,plethodontid,carolinensi,blotch
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+74,1,ecology,NA,reef ecology,rfe,coral,reef,coloni,caribbean,bore,anemon,calcif,polyp,zooxanthella,marin,sea,mar,skeleton,tropic,great,live,acropora,skelet,trench,aragonit,proc,scleractinian,branch,seawat,pacif,barrier,build,algal,shallow,depth
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3,1,geography & chemistry,NA,rivers,riv,river,creek,flood,channel,stream,basin,flow,water,drainag,dam,watersh,floodplain,discharg,reach,lower,upper,downstream,tributari,upstream,bank,system,reservoir,mississippi,habitat,fork,lamprey,catchment,riparian,arkansa,freshwat
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+127,1,NA,NA,statistics 1,s1,analysi,variabl,correl,valu,measur,score,statist,sampl,compon,variat,set,mean,varianc,group,coeffici,posit,index,factor,axi,analys,calcul,matrix,total,averag,repres,princip,standard,correspond,order,level
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+52,1,NA,NA,statistics 2,s2,estim,rate,error,calcul,interv,popul,valu,bias,mean,averag,paramet,model,year,confid,assum,measur,proport,varianc,analysi,probabl,individu,standard,variat,assumpt,correct,sampl,ratio,statist,usa,size
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+194,1,NA,NA,statistics 3,s3,size,larger,bodi,smaller,length,mean,individu,measur,class,relationship,variat,correl,largest,distribut,sampl,averag,regress,smallest,frequenc,greater,ratio,decreas,log,maximum,weight,posit,vari,slope,pattern,variabl
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+164,1,NA,NA,statistics 4,s4,model,predict,regress,fit,variabl,linear,valu,relationship,log,paramet,best,function,slope,distribut,curv,statist,set,equat,power,coeffici,line,predictor,explain,intercept,logist,residu,independ,area,random,approach
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+55,1,NA,NA,statistics bayesian,sb,probabl,model,state,transit,likelihood,distribut,infer,set,paramet,bayesian,substitut,chain,maximum,node,comput,random,algorithm,posterior,simul,event,prior,statist,approach,case,run,expect,rate,sequenc,gamma,length
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4,1,geography & chemistry,NA,soil chemistry,sc,oxid,iron,crystal,ion,calcium,hydrogen,oxygen,bog,peat,anaerob,sulfur,sodium,sulfat,ppm,reduct,reduc,sphagnum,concentr,acid,fen,methan,solut,aerob,chemistri,miner,potassium,chemic,sulfid,chlorid,water
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21,1,ecology,plant,seed dispersal,sdd,dispers,fruit,seed,distanc,frugivor,berri,plant,wind,ripen,fleshi,remov,nut,dis,pulp,persal,long,ripe,synten,mast,bird,endocarp,limit,matur,anim,diaspor,crop,ecol,mistleto,propagul,sourc
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+38,1,ecology,plant,seed ecology,sde,seed,germin,emerg,seedl,bank,dormanc,weed,plant,soil,sci,seedbank,collect,light,dri,burial,viabl,condit,viabil,buri,requir,percentag,matur,place,produc,dormant,annual,field,establish,experi,baskin
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+143,1,ecology,NA,stable isotope ecology,sie,ratio,isotop,valu,carbon,sampl,fraction,sourc,composit,stabl,label,element,enrich,atom,mix,tissu,melt,signatur,deriv,analysi,mass,deplet,planet,radioact,analys,materi,analyz,standard,collect,variat,contribut
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+72,1,ecology,plant,soil ecology 1,sl1,litter,loss,decay,decomposit,dead,bag,decompos,rate,resin,mass,materi,lost,lignin,floor,isotopi,initi,mesh,organ,debri,process,remain,live,didn,ecosystem,qualiti,dfa,litterfal,leaf,amount,microbi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+175,1,ecology,plant,soil ecology 2,sl2,soil,organ,nitrogen,miner,moistur,content,nodul,clay,nutrient,matter,fertil,dri,concentr,extract,loam,total,depth,sampl,chemic,higher,acid,influenc,solut,sci,properti,horizon,legum,microbi,silt,leach
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+198,1,ecology,plant,soil ecology 3,sl3,root,dri,soil,plant,growth,shoot,ground,inch,grow,fine,system,moistur,acr,broom,length,smartwe,weight,develop,grown,cut,moist,tip,stem,underground,condit,diamet,area,water,pot,top
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+131,1,ecology,animal,small mammal ecology,sme,trap,mice,captur,mous,vole,rabbit,anim,fenc,mammal,shrew,field,caught,popul,catch,microtus,enclosur,scat,night,live,rodent,area,abund,total,activ,day,set,individu,weasel,place,habitat
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19,1,ecology,animal,social behaviour 1,soc1,social,behavior,individu,behaviour,group,cooper,behav,aggress,anim,interact,domin,pair,display,soc,proc,benefit,game,territori,kin,strategi,help,learn,partner,member,punish,ecol,encount,helper,fight,conflict
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+199,1,evolutionary biology,animal,social behaviour 2,soc2,ant,grous,hare,lek,trail,termit,hen,pheasant,ruf,snowsho,partridg,sage,nest,chicken,raid,cut,braun,scout,activ,formicida,shot,attin,lagopus,forag,keith,red,atta,connelli,tend,armi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+151,1,evolutionary biology,NA,speciation,spc,hybrid,speciat,isol,parent,cross,diverg,race,gene,evolut,sympatr,genet,zone,morpholog,pattern,introgress,origin,reproduct,flow,complex,intermedi,pair,mayr,barrier,interspecif,individu,evid,form,allopatr,differenti,grant
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+130,1,evolutionary biology,NA,sexual selection,ss,male,femal,sex,mate,sexual,ratio,copul,success,dimorph,bias,select,reproduct,pair,courtship,patern,choic,system,behavior,competit,display,fertil,ornament,behav,color,sire,multipl,monogam,attract,evolut,pattern
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+77,1,NA,NA,stratigraphy,stg,format,geolog,zone,rock,deposit,upper,bed,age,lower,basin,earth,earli,late,geol,form,middl,text,limeston,boundari,shale,cretac,eocen,thick,miocen,sediment,plate,unit,mantl,foraminifera,crust
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+190,1,"cell, developmental biology, physiology",NA,stress responses,str,stress,respons,toler,induc,level,tissu,physiolog,resist,regul,exposur,control,mechan,induct,condit,sensit,shock,expos,low,injuri,adapt,transloc,physiol,proteom,reduc,accumul,heat,damag,freez,chang,decreas
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+138,1,geography & chemistry,NA,seasonal variation,svr,season,year,winter,spring,period,month,summer,june,juli,earli,late,april,march,august,mean,fall,septemb,annual,octob,autumn,date,averag,peak,januari,decemb,novemb,week,mid,februari,variat
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+132,1,NA,NA,systematics,sys,famili,genera,genus,garden,botan,subfamili,tribe,group,guinea,taxonom,distribut,kew,world,systemat,press,generic,van,classif,london,habit,taxa,gard,list,thailand,missouri,flora,revis,belong,taxonomi,rare
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+23,1,conservation & management biology,plant,tropical forest conservation,tfc,edg,fragment,forest,brazil,amazon,interior,brazilian,amazonian,amazonia,santo,silva,conserv,paulo,deforest,corridor,frag,remnant,area,sao,neotrop,isol,oliveira,distanc,continu,habitat,sma,firm,central,atlant,reserva
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+191,1,ecology,plant,tropical forest ecology,tfe,tropic,forest,dri,rain,costa,rica,wet,temper,neotrop,palm,panama,rainforest,lowland,season,press,secondari,canopi,cloud,raini,liana,rainfal,ed,humid,montan,subtrop,moist,biotropica,trop,primari,tree
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+90,1,NA,NA,theoretical models,tm,model,dynam,simul,rate,paramet,system,valu,depend,function,equat,popul,equilibrium,state,assum,stabil,initi,process,stabl,generat,case,constant,predict,condit,structur,stochast,cycl,phase,threshold,chang,correspond
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+63,1,ecology,animal,temperate marine ecology,tme,star,crab,cancer,oyster,urchin,asteroid,lobster,kelp,sea,crustacean,blue,echinoid,carapac,spini,decapod,echinoderm,marin,uca,mortensen,horsesho,decapoda,ophri,abalon,molt,crustacea,ghost,starfish,fiddler,miln,diadema
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+75,1,evolutionary biology,NA,traits,tr,trait,correl,function,variat,plastic,respons,environ,life,perform,histori,analys,environment,contrast,trade,associ,specif,relationship,phenotyp,condit,measur,link,analysi,strategi,pnas,negat,supplementari,integr,variabl,level,posit
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+178,1,NA,NA,taxonomy,tx,specimen,collect,genus,museum,local,mexico,subspeci,descript,holotyp,type,describ,taxonom,examin,histori,length,distinct,systemat,report,name,group,distribut,mexican,list,note,morpholog,mus,state,charact,color,gray
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+195,1,ecology,NA,urban ecology,ue,road,urban,hous,citi,vehicl,rural,collis,cat,highway,area,traffic,dwarf,suburban,roadsid,human,town,residenti,cross,birch,build,rout,heath,habitat,pubescen,undevelop,total,transport,environ,splenden,type
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+112,1,evolutionary biology,animal,vertebrate paleontology 1,vp1,bone,teeth,tooth,skull,vertebr,lower,upper,fossil,molar,mammal,earli,jaw,anterior,specimen,museum,late,cranial,dental,posterior,process,paleontolog,crest,miocen,left,crown,cusp,middl,view,enamel,eocen
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+86,1,evolutionary biology,animal,vertebrate paleontology 2,vp2,structur,form,develop,primit,element,ray,anatomi,origin,featur,dinosaur,limb,evolut,deriv,muscl,group,later,type,tissu,posit,anatom,earli,bundl,view,arrang,secondari,distal,appear,rib,region,famili
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+79,1,conservation & management biology,animal,waterbird management,wbm,duck,waterfowl,mallard,wetland,gees,wildl,crane,manag,swan,lesser,duckl,asn,ana,alpha,scaup,beta,gradient,winter,sandhil,refug,eider,waterbird,hen,goldeney,canvasback,coot,wing,strata,ankney,stratum
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+165,1,ecology,plant,woodland ecology,wde,wood,woodland,leafi,spurg,earthworm,layer,sylvestri,distribut,hedg,record,alder,albican,alnus,ground,collembola,sylvatica,total,crataegus,abund,ivi,hazel,group,area,esula,sampl,decidu,flexuosa,worm,fda,spp
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+78,1,ecology,plant,wetland ecology,wte,marsh,wetland,salt,tidal,estuari,tide,mangrov,reed,flood,estuarin,coastal,zone,spartina,low,veget,level,bay,salin,teal,flat,freshwat,water,paten,phragmit,area,maritima,saltmarsh,habitat,mud,mudflat
