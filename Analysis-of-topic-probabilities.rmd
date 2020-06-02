@@ -1,5 +1,5 @@
 ---
-title: "Basic Stats corrected"
+title: "EEdata topic analysis + plots"
 author: "Sam McKay"
 date: "15/04/2020"
 output: html_document
