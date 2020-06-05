@@ -1,0 +1,105 @@
+---
+title: "estimating rates of change
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+####preamble
+Here we are going to look at the evolution of the topics and pick out those that evolve fast and slow
+
+#### libraries
+````{r}
+library(scales)
+library(mgcv)
+library(ggplot2)
+library(data.table)
+library(tidyr)
+library(tidyquant)
+library(lubridate)
+library(colortools)
+library(dplyr)
+library(broom)
+```````
+data
+````{r}
+a<-fread("EEpaperslong.csv", header=TRUE)
+a<-as.data.frame(a)
+````
+
+get evolution papers
+``````{r}
+a1<-a%>%
+  filter(evolution_paper==1)%>%
+  group_by(year, topic_label)%>%
+  summarize(N_papers=sum(present05))%>%
+  filter(year>=1900 & year<=2010)
+
+papers<-a%>%
+  filter(evolution_paper==1)%>%
+  group_by(year)%>%
+  summarize(N_total_papers=length(paper_id))%>%
+  filter(year>=1900 & year<=2010)
+
+a2<-merge(a1, papers, by="year")
+a2$prob<-a2$N_papers/a2$N_total_papers
+````````
+suppose our revolution runs from 1920-1930.  Let's look at the rate of change for each topic from 10 years on either side, ie, 1910-1940.
+````{r}
+a2$year<-as.numeric(as.character(a2$year))
+unique(a2$year)
+a3<-a2%>%
+filter(year>=1951)%>%
+filter(year <1979)
+``````
+now do a linear regression on the probabilities of each topic
+
+`````{r}
+a4<-a3%>%
+group_by(topic_label)%>%
+do(fitm=lm(prob~year, data=.))
+coefs<-tidy(a4, fitm)%>%
+filter(term=="year")
+coefs$absestimate<-abs(coefs$estimate)
+coefs<-coefs%>%arrange(desc(coefs$absestimate))
+`````
+let's pull out the 5% of topics that are changing fastest. These are most likely to contribute to the revolution
+`````{r}
+coef1<-coefs%>%
+filter(absestimate>=quantile(coefs$absestimate, 0.90))
+``````
+let's get a list of them
+````{r}
+revtopics<-coef1$topic_label
+``````
+let's subset our original data to see how they change
+``````{r}
+a4<-a3%>%
+filter(topic_label%in%revtopics)
+``````
+plot
+`````{r}
+coef2<-coef1%>%
+  select(topic_label, absestimate)
+a4<-merge(a4, coef2, by="topic_label")
+a4$topic_label<-reorder(a4$topic_label,desc(a4$absestimate))
+levels(a4$topic_label)
+ggplot(a4, aes(y=prob, x=year, colour=as.factor(topic_label)))+
+geom_point()+
+geom_smooth(method="lm", se=FALSE)+
+guides(colour=FALSE)+
+facet_wrap(~topic_label, ncol=6, scales="free")+
+geom_vline(xintercept = 1956, col="red", size=1, linetype="dotted", alpha=0.5)+
+geom_vline(xintercept = 1961, col="red", size=1, linetype="dotted", alpha=0.5)+
+theme_classic()+
+theme(aspect.ratio = 1)+
+  ggsave(filename="rapidly evolving topics.pdf", plot = last_plot(),
+device = "pdf",
+path = "/Users/Armand/Dropbox/MS\ NatEcolEvol", scale = 1,width = 40,height = 20,units = c("cm"))
+``````
+This plot, then, orders the most rapidly changing variables in the year 1920-1940, in decreasing order of importance. It also shows when the revolution happened. 
+
+So, if there were a revolution in these years, I would say that its due to an increase in seasonal variation, plant community ecology, phenology --- classic communtiy ecology stuff --- at the expense of descriptive botany. 
+
+Of coruse, had I subsetted to just evolution or ecology papers and topics this would be clearer. 
